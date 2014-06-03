@@ -81,7 +81,6 @@ public class Util {
 
                 try {
                     new Jogo2().setVisible(false);
-                    new Jogo2().
                     new EscolheJogo().setVisible(true);
                     //dispose();
                     System.out.println("util");
