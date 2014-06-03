@@ -1,5 +1,9 @@
 package br.com.view;
 
+import br.com.util.Util;
+import static br.com.view.Jogo2.frame;
+import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Frame;
 
@@ -21,6 +25,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
 
 import javax.swing.JLabel;
 
@@ -69,6 +76,8 @@ public class Jogo1 extends Panel {
     Color corRetangulo23;
     Color corRetangulo24;
 
+    JButton btnVoltar = new JButton("Voltar");
+    Util util = new Util();
     private static final long serialVersionUID = 8067455339781596616L;
 
     public Jogo1() {
@@ -83,17 +92,8 @@ public class Jogo1 extends Panel {
     }
 
     public void montarFrame() {
-        frame.add(new Jogo1());
-        frame.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-            }
-        });
-
-//		frame.getContentPane().add(lblCronometro, BorderLayout.CENTER); 
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-        frame.setExtendedState(MAXIMIZED_BOTH);
+        frame = this.util.montarFrameGenericoJogo1();
+        frame.setTitle("Jogo 1");
     }
 
     public void MontarRetangulo() {

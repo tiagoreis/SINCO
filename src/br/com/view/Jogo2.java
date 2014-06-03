@@ -35,6 +35,10 @@ import javax.swing.SwingConstants;
 
 public class Jogo2 extends Panel {
 
+    public static void dispose() {
+        dispose();
+    }
+
     // http://www.professorvida.com.br/el53d/2_ig1.pdf
     // http://www.eclipse.org/efxclipse/install.html
     // http://efxclipse.bestsolution.at/install.html
@@ -48,7 +52,12 @@ public class Jogo2 extends Panel {
     int fatorEspacoX = 110;
 
     int meiaTelaLargura;
+//    int fracaoLargura;
     int fracaoLargura;
+    int fracaoLarguraRetangulo ;
+    int fracaoAltura;
+    int fracaoAlturaRetangulo;
+
 
     Map<String, String> valores = new HashMap<String, String>();
 
@@ -76,31 +85,32 @@ public class Jogo2 extends Panel {
 
     static JLabel lblCronometro = new JLabel();
     static JFrame frame = new JFrame("Fase 2");
- JButton btnVoltar = new JButton("teste");
+    JButton btnVoltar = new JButton("Voltar"); 
  
     Util util = new Util();
         
     private static final long serialVersionUID = 8067455339781596616L;
 
     public Jogo2() {
-        Util util = new Util();
-        
         AjustarCursosMouse();
         util.AjustarTamanhoTela();
-        MontarRetangulo();
+        montarRetangulo();
         
     }
 
     public void montarFrame() {
         
-        frame = this.util.montarFrameGenerico();
+//        btnVoltar = util.localizacaoBotaoVoltar(btnVoltar);
+//        frame.add(btnVoltar, BorderLayout.CENTER);
+        frame = this.util.montarFrameGenericoJogo2();
         frame.setTitle("Jogo 2");
 
     }
 
 
-    public void MontarRetangulo() {
+    public void montarRetangulo() {
 
+        ajustarTamanhoRetangulo();
         int nivel = 1;
 
         switch (nivel) {
@@ -109,19 +119,22 @@ public class Jogo2 extends Panel {
                 //y = altura na tela
                 // x ,  y , width, height
 
-                retangulo11 = new Rectangle(200, 150, larguraRetanguloPadrao, alturaRetanguloPadrao);
+                retangulo11 = new Rectangle(fracaoLarguraRetangulo, 
+                        fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
                 corRetangulo11 = Color.black;
-                retangulo12 = new Rectangle(200, 370, larguraRetanguloPadrao, alturaRetanguloPadrao);
+                retangulo12 = new Rectangle(fracaoLarguraRetangulo, (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
                 corRetangulo12 = Color.black;
 
-                retangulo21 = new Rectangle(600, 150, larguraRetanguloPadrao, alturaRetanguloPadrao);
+                retangulo21 = new Rectangle((fracaoLarguraRetangulo + fracaoLargura), 
+                        fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
                 corRetangulo21 = Color.black;
-                retangulo22 = new Rectangle(600, 370, larguraRetanguloPadrao, alturaRetanguloPadrao);
+                retangulo22 = new Rectangle((fracaoLarguraRetangulo + fracaoLargura), 
+                        (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
                 corRetangulo22 = Color.black;
 
-                retangulo31 = new Rectangle(1000, 150, larguraRetanguloPadrao, alturaRetanguloPadrao);
+                retangulo31 = new Rectangle((fracaoLarguraRetangulo + (fracaoLargura * 2)), fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
                 corRetangulo31 = Color.black;
-                retangulo32 = new Rectangle(1000, 370, larguraRetanguloPadrao, alturaRetanguloPadrao);
+                retangulo32 = new Rectangle((fracaoLarguraRetangulo + (fracaoLargura * 2)), (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
                 corRetangulo32 = Color.black;
 
                 addMouseMotionListener(new RectangleHandler());
@@ -159,6 +172,24 @@ public class Jogo2 extends Panel {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+    private void ajustarTamanhoRetangulo() {
+        
+        this.alturaRetanguloPadrao = util.getAlturaTela() / 4;
+        this.larguraRetanguloPadrao = util.getAlturaTela() / 4;
+
+        fracaoLargura = util.getLarguraTela() / 3;
+        fracaoLarguraRetangulo = fracaoLargura / 3;
+        
+        fracaoAltura = util.getAlturaTela() / 3;
+        fracaoAlturaRetangulo = fracaoAltura / 3;
+        
+        
+//        System.out.println("alturaRetanguloPadrao= " + this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= " + this.larguraRetanguloPadrao);
+//        System.out.println("fracaoLargura= " + fracaoLargura + "  fracaoLarguraP= " + fracaoLarguraRetangulo);
+//        System.out.println("fracaoAltura= " + fracaoAltura + "  fracaoAlturaP= " + fracaoAlturaRetangulo);
 
     }
 
