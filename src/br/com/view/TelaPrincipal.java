@@ -7,6 +7,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public TelaPrincipal() {
         setExtendedState(MAXIMIZED_BOTH);
         initComponents();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -15,9 +16,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         framePrincipal = new javax.swing.JFrame();
         btnBomDia = new javax.swing.JButton();
-        btnObrigado = new javax.swing.JButton();
+        btnSim = new javax.swing.JButton();
         btnJogos = new javax.swing.JButton();
         btnPrecisoDeAjuda = new javax.swing.JButton();
+        btnObrigado = new javax.swing.JButton();
+        btnNao = new javax.swing.JButton();
+        btnQueroMeMexer = new javax.swing.JButton();
 
         javax.swing.GroupLayout framePrincipalLayout = new javax.swing.GroupLayout(framePrincipal.getContentPane());
         framePrincipal.getContentPane().setLayout(framePrincipalLayout);
@@ -34,6 +38,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setTitle("SINCO");
         setExtendedState(100);
         setName("framePrincipal"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(1200, 1000));
 
         btnBomDia.setText("Bom Dia!");
         btnBomDia.addActionListener(new java.awt.event.ActionListener() {
@@ -42,10 +47,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnObrigado.setText("Obrigado!");
-        btnObrigado.addActionListener(new java.awt.event.ActionListener() {
+        btnSim.setText("Sim");
+        btnSim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnObrigadoActionPerformed(evt);
+                btnSimActionPerformed(evt);
             }
         });
 
@@ -63,19 +68,42 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnObrigado.setText("Obrigado!");
+        btnObrigado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnObrigadoActionPerformed(evt);
+            }
+        });
+
+        btnNao.setText("Não");
+        btnNao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNaoActionPerformed(evt);
+            }
+        });
+
+        btnQueroMeMexer.setText("Quero me mexer");
+        btnQueroMeMexer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQueroMeMexerActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(btnJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 261, Short.MAX_VALUE)
-                .addComponent(btnBomDia, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnObrigado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 685, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(btnBomDia, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnObrigado, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnQueroMeMexer, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,11 +111,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnBomDia, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(btnObrigado, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnQueroMeMexer, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pack();
@@ -105,15 +138,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
         audio.tocarAudio("bomdia");
     }//GEN-LAST:event_btnBomDiaActionPerformed
 
-    private void btnObrigadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnObrigadoActionPerformed
+    private void btnSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimActionPerformed
         Audio audio = new Audio();
         audio.tocarAudio("obrigado");
-    }//GEN-LAST:event_btnObrigadoActionPerformed
+    }//GEN-LAST:event_btnSimActionPerformed
 
     private void btnPrecisoDeAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrecisoDeAjudaActionPerformed
          Audio audio = new Audio();
         audio.tocarAudio("precisodeajuda");
     }//GEN-LAST:event_btnPrecisoDeAjudaActionPerformed
+
+    private void btnObrigadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnObrigadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnObrigadoActionPerformed
+
+    private void btnNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNaoActionPerformed
+
+    private void btnQueroMeMexerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQueroMeMexerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnQueroMeMexerActionPerformed
 
 
     public static void main(String args[]) {
@@ -152,8 +197,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBomDia;
     private javax.swing.JButton btnJogos;
+    private javax.swing.JButton btnNao;
     private javax.swing.JButton btnObrigado;
     private javax.swing.JButton btnPrecisoDeAjuda;
+    private javax.swing.JButton btnQueroMeMexer;
+    private javax.swing.JButton btnSim;
     private javax.swing.JFrame framePrincipal;
     // End of variables declaration//GEN-END:variables
 
