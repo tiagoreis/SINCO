@@ -38,7 +38,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setTitle("SINCO");
         setExtendedState(100);
         setName("framePrincipal"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1200, 1000));
 
         btnBomDia.setText("Bom Dia!");
         btnBomDia.addActionListener(new java.awt.event.ActionListener() {

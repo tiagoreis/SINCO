@@ -28,6 +28,7 @@ import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 
 import javax.swing.JLabel;
 
@@ -65,7 +66,7 @@ public class Jogo1 extends Panel {
     boolean retangulo22Marcado = false;
 
     static JLabel lblCronometro = new JLabel();
-    static Frame frame = new Frame("Fase 1");
+    static JFrame frame = new JFrame("Fase 1");
 
     Rectangle retangulo21;
     Rectangle retangulo22;
@@ -80,6 +81,9 @@ public class Jogo1 extends Panel {
     Util util = new Util();
     private static final long serialVersionUID = 8067455339781596616L;
 
+    private boolean zerarJogo = false;
+    
+    
     public Jogo1() {
         AjustarCursosMouse();
         AjustarTamanhoTela();
@@ -94,6 +98,11 @@ public class Jogo1 extends Panel {
     public void montarFrame() {
         frame = this.util.montarFrameGenericoJogo1();
         frame.setTitle("Jogo 1");
+        
+        System.out.println("zerarJogo "+zerarJogo);
+        if (zerarJogo){
+            reiniciarQuadadros();
+        }
     }
 
     public void MontarRetangulo() {
@@ -233,6 +242,19 @@ public class Jogo1 extends Panel {
             }
         };
         timer.schedule(tarefa, 1000, 1000);
+    }
+
+    private void reiniciarQuadadros() {
+        
+        System.out.println("zerar");
+        
+    }
+
+    /**
+     * @param zerarJogo the zerarJogo to set
+     */
+    public void setZerarJogo(boolean zerarJogo) {
+        this.zerarJogo = zerarJogo;
     }
 
     private class RectangleHandler extends MouseMotionAdapter {

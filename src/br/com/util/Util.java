@@ -18,6 +18,7 @@ public class Util {
     JButton btnVoltar = new JButton("Voltar");
     private int alturaTela;
     private int larguraTela;
+    static JFrame frame;
 
     public Util() {
         AjustarTamanhoTela();
@@ -25,7 +26,7 @@ public class Util {
     }
 
     public JFrame montarFrameGenericoJogo1() {
-        JFrame frame = new JFrame();
+        frame = new JFrame();
 
         btnVoltar = localizacaoBotaoVoltar(btnVoltar);
 //        btnVoltar.setBounds((this.getLarguraTela() - 170), 10, 150, 100);
@@ -48,6 +49,9 @@ public class Util {
                 try {
                     new EscolheJogo().setVisible(true);
                     dispose();
+                    frame.setVisible(false);
+                    Jogo1 jogo = new Jogo1();
+                    jogo.setZerarJogo(true);
                 } catch (Exception ex) {
                     Logger.getLogger(Jogo1.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -59,7 +63,7 @@ public class Util {
 
        
     public JFrame montarFrameGenericoJogo2() {
-        JFrame frame = new JFrame();
+        frame = new JFrame();
 
         btnVoltar = localizacaoBotaoVoltar(btnVoltar);
 //        btnVoltar.setBounds((this.getLarguraTela() - 170), 10, 150, 100);
@@ -80,10 +84,8 @@ public class Util {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
 
                 try {
-                    new Jogo2().setVisible(false);
                     new EscolheJogo().setVisible(true);
-                    //dispose();
-                    System.out.println("util");
+                    frame.setVisible(false);
                     
                 } catch (Exception ex) {
                     Logger.getLogger(Jogo2.class.getName()).log(Level.SEVERE, null, ex);
@@ -96,7 +98,7 @@ public class Util {
 
 
     public JFrame montarFrameGenericoJogo3() {
-        JFrame frame = new JFrame();
+        frame = new JFrame();
 
         btnVoltar = localizacaoBotaoVoltar(btnVoltar);
         
@@ -118,6 +120,8 @@ public class Util {
                 try {
                     new EscolheJogo().setVisible(true);
                     dispose();
+                    frame.setVisible(false);
+
                 } catch (Exception ex) {
                     Logger.getLogger(Jogo3.class.getName()).log(Level.SEVERE, null, ex);
                 }
