@@ -2,11 +2,9 @@ package br.com.view;
 
 
 import br.com.util.Util;
-import static br.com.view.Jogo1.frame;
 import java.awt.Color;
 import java.awt.Frame;
 
-import static java.awt.Frame.MAXIMIZED_BOTH;
 
 import java.awt.Graphics;
 import java.awt.Panel;
@@ -15,14 +13,8 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javax.swing.JLabel;
 
@@ -138,9 +130,9 @@ public class Jogo3 extends Panel {
         fracaoAlturaRetangulo = fracaoAltura / 3;
         
         
-        System.out.println("alturaRetanguloPadrao= " + this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= " + this.larguraRetanguloPadrao);
-        System.out.println("fracaoLargura= " + fracaoLargura + "  fracaoLarguraP= " + fracaoLarguraRetangulo);
-        System.out.println("fracaoAltura= " + fracaoAltura + "  fracaoAlturaP= " + fracaoAlturaRetangulo);
+//        System.out.println("alturaRetanguloPadrao= " + this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= " + this.larguraRetanguloPadrao);
+//        System.out.println("fracaoLargura= " + fracaoLargura + "  fracaoLarguraP= " + fracaoLarguraRetangulo);
+//        System.out.println("fracaoAltura= " + fracaoAltura + "  fracaoAlturaP= " + fracaoAlturaRetangulo);
 
     }
 
@@ -193,8 +185,8 @@ public class Jogo3 extends Panel {
         this.fracaoLargura = (this.larguraTela / 2) / 3;
 
         // debug
-        System.out.println("width= " + this.larguraTela + "  height= " + this.alturaTela);
-        System.out.println("alturaRetanguloPadrao= " + this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= " + this.larguraRetanguloPadrao);
+//        System.out.println("width= " + this.larguraTela + "  height= " + this.alturaTela);
+//        System.out.println("alturaRetanguloPadrao= " + this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= " + this.larguraRetanguloPadrao);
 //		System.out.println("largura 1= " + fracaoLargura);
 //		System.out.println("largura 2= " + (meiaTelaLargura + fracaoLargura));
     }
@@ -225,7 +217,7 @@ public class Jogo3 extends Panel {
 
             if (retangulo11Marcado && retangulo12Marcado && retangulo21Marcado
                     && retangulo22Marcado) {
-                System.out.println("todos percorridos");
+//                System.out.println("todos percorridos");
             }
 
         }

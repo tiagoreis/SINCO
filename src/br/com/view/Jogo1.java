@@ -1,13 +1,7 @@
 package br.com.view;
 
 import br.com.util.Util;
-import static br.com.view.Jogo2.frame;
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Frame;
-
-import static java.awt.Frame.MAXIMIZED_BOTH;
 
 
 import java.awt.Graphics;
@@ -17,16 +11,12 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -89,20 +79,11 @@ public class Jogo1 extends Panel {
         AjustarTamanhoTela();
         MontarRetangulo();
 
-//        Cronometro(lblCronometro);
-//        lblCronometro.setText("Cronometro medonho");
-//        lblCronometro.setBounds(10, 10, 100, 30);
-//        frame.add(lblCronometro);
     }
 
     public void montarFrame() {
         frame = this.util.montarFrameGenericoJogo1();
         frame.setTitle("Jogo 1");
-        
-        System.out.println("zerarJogo "+zerarJogo);
-        if (zerarJogo){
-            reiniciarQuadadros();
-        }
     }
 
     public void MontarRetangulo() {
@@ -246,7 +227,7 @@ public class Jogo1 extends Panel {
 
     private void reiniciarQuadadros() {
         
-        System.out.println("zerar");
+//        System.out.println("zerar");
         
     }
 

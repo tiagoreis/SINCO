@@ -4,10 +4,12 @@ import br.com.audio.Audio;
 
 public class TelaPrincipal extends javax.swing.JFrame {
 
+    Audio audio = new Audio();
+
     public TelaPrincipal() {
         setExtendedState(MAXIMIZED_BOTH);
         initComponents();
-        
+
     }
 
     @SuppressWarnings("unchecked")
@@ -22,6 +24,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnObrigado = new javax.swing.JButton();
         btnNao = new javax.swing.JButton();
         btnQueroMeMexer = new javax.swing.JButton();
+        btnQueroIrAoBanheiro = new javax.swing.JButton();
+        btnDesligueALuz = new javax.swing.JButton();
+        btnQueroVerTV = new javax.swing.JButton();
+        btnChameAEnfermeira = new javax.swing.JButton();
 
         javax.swing.GroupLayout framePrincipalLayout = new javax.swing.GroupLayout(framePrincipal.getContentPane());
         framePrincipal.getContentPane().setLayout(framePrincipalLayout);
@@ -38,6 +44,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setTitle("SINCO");
         setExtendedState(100);
         setName("framePrincipal"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(1300, 768));
 
         btnBomDia.setText("Bom Dia!");
         btnBomDia.addActionListener(new java.awt.event.ActionListener() {
@@ -88,38 +95,81 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnQueroIrAoBanheiro.setText("Quero ir ao banheiro");
+        btnQueroIrAoBanheiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQueroIrAoBanheiroActionPerformed(evt);
+            }
+        });
+
+        btnDesligueALuz.setText("Desligue a luz");
+        btnDesligueALuz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDesligueALuzActionPerformed(evt);
+            }
+        });
+
+        btnQueroVerTV.setText("Quero ver TV");
+        btnQueroVerTV.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQueroVerTVActionPerformed(evt);
+            }
+        });
+
+        btnChameAEnfermeira.setText("Chame a enfermeira");
+        btnChameAEnfermeira.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChameAEnfermeiraActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 685, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(btnBomDia, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnObrigado, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                        .addComponent(btnDesligueALuz, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnObrigado, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnBomDia, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnQueroIrAoBanheiro, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnQueroVerTV, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnQueroMeMexer, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(btnChameAEnfermeira, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnObrigado, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBomDia, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(btnObrigado, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                    .addComponent(btnQueroVerTV, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDesligueALuz, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnQueroMeMexer, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
+                    .addComponent(btnQueroIrAoBanheiro, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnQueroMeMexer, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnChameAEnfermeira, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pack();
@@ -133,32 +183,44 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
 
     private void btnBomDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBomDiaActionPerformed
-        Audio audio = new Audio();
         audio.tocarAudio("bomdia");
     }//GEN-LAST:event_btnBomDiaActionPerformed
 
     private void btnSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimActionPerformed
-        Audio audio = new Audio();
-        audio.tocarAudio("obrigado");
+        audio.tocarAudio("sim");
     }//GEN-LAST:event_btnSimActionPerformed
 
     private void btnPrecisoDeAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrecisoDeAjudaActionPerformed
-         Audio audio = new Audio();
         audio.tocarAudio("precisodeajuda");
     }//GEN-LAST:event_btnPrecisoDeAjudaActionPerformed
 
     private void btnObrigadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnObrigadoActionPerformed
-        // TODO add your handling code here:
+        audio.tocarAudio("obrigado");
     }//GEN-LAST:event_btnObrigadoActionPerformed
 
     private void btnNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNaoActionPerformed
-        // TODO add your handling code here:
+        audio.tocarAudio("nao");
     }//GEN-LAST:event_btnNaoActionPerformed
 
     private void btnQueroMeMexerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQueroMeMexerActionPerformed
-        // TODO add your handling code here:
+        audio.tocarAudio("queromemexer");
     }//GEN-LAST:event_btnQueroMeMexerActionPerformed
 
+    private void btnQueroIrAoBanheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQueroIrAoBanheiroActionPerformed
+        audio.tocarAudio("queroiraobanheiro");
+    }//GEN-LAST:event_btnQueroIrAoBanheiroActionPerformed
+
+    private void btnDesligueALuzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesligueALuzActionPerformed
+        audio.tocarAudio("desliguealuz");
+    }//GEN-LAST:event_btnDesligueALuzActionPerformed
+
+    private void btnQueroVerTVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQueroVerTVActionPerformed
+        audio.tocarAudio("querovertv");
+    }//GEN-LAST:event_btnQueroVerTVActionPerformed
+
+    private void btnChameAEnfermeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChameAEnfermeiraActionPerformed
+        audio.tocarAudio("chameaenfermeira");
+    }//GEN-LAST:event_btnChameAEnfermeiraActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -195,11 +257,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBomDia;
+    private javax.swing.JButton btnChameAEnfermeira;
+    private javax.swing.JButton btnDesligueALuz;
     private javax.swing.JButton btnJogos;
     private javax.swing.JButton btnNao;
     private javax.swing.JButton btnObrigado;
     private javax.swing.JButton btnPrecisoDeAjuda;
+    private javax.swing.JButton btnQueroIrAoBanheiro;
     private javax.swing.JButton btnQueroMeMexer;
+    private javax.swing.JButton btnQueroVerTV;
     private javax.swing.JButton btnSim;
     private javax.swing.JFrame framePrincipal;
     // End of variables declaration//GEN-END:variables

@@ -1,37 +1,18 @@
 package br.com.view;
 
 import br.com.util.Util;
-import static br.com.view.AlteraCor2.frame;
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
-import com.sun.javaws.Main;
-import java.awt.BorderLayout;
-import java.awt.Button;
 import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Frame;
-import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.Graphics;
 import java.awt.Panel;
 import java.awt.Rectangle;
 import java.awt.Robot;
-import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 
 public class Jogo2 extends Panel {
 
@@ -216,7 +197,7 @@ public class Jogo2 extends Panel {
 
             if (retangulo11Marcado && retangulo12Marcado && retangulo21Marcado
                     && retangulo22Marcado) {
-                System.out.println("todos percorridos");
+//                System.out.println("todos percorridos");
             }
 
         }

@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class Util {
 
@@ -19,6 +20,7 @@ public class Util {
     private int alturaTela;
     private int larguraTela;
     static JFrame frame;
+    private JLabel lblCronometro;
 
     public Util() {
         AjustarTamanhoTela();
@@ -28,6 +30,13 @@ public class Util {
     public JFrame montarFrameGenericoJogo1() {
         frame = new JFrame();
 
+//        Cronometro(lblCronometro);
+//        lblCronometro.setText("Cronometro medonho");
+//        lblCronometro.setBounds(10, 10, 100, 30);
+        
+
+//        lblCronometro = licalizacaoCronometro(lblCronometro);
+//        frame.add(lblCronometro);
         btnVoltar = localizacaoBotaoVoltar(btnVoltar);
 //        btnVoltar.setBounds((this.getLarguraTela() - 170), 10, 150, 100);
 
@@ -48,10 +57,7 @@ public class Util {
 
                 try {
                     new EscolheJogo().setVisible(true);
-                    dispose();
                     frame.setVisible(false);
-                    Jogo1 jogo = new Jogo1();
-                    jogo.setZerarJogo(true);
                 } catch (Exception ex) {
                     Logger.getLogger(Jogo1.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -153,6 +159,13 @@ public class Util {
     public JButton localizacaoBotaoVoltar(JButton botao) {
         botao.setBounds((this.getLarguraTela() - 170), (this.getAlturaTela() - 150), 150, 100);
         return botao;
+    }
+
+    private JLabel licalizacaoCronometro(JLabel label) {
+        label.setBounds(0, (this.getAlturaTela() - 50), 50, 20);
+        label.setText("00:00:00"); // NOI18N
+        
+        return label;
     }
 
 }
