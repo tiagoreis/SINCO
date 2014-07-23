@@ -24,7 +24,7 @@
     <Property name="extendedState" type="int" value="100"/>
     <Property name="name" type="java.lang.String" value="framePrincipal" noResource="true"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1300, 768]"/>
+      <Dimension value="[1024, 768]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -48,29 +48,38 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnJogos" min="-2" pref="250" max="-2" attributes="0"/>
-                      <EmptySpace pref="19" max="32767" attributes="0"/>
-                      <Component id="btnDesligueALuz" min="-2" pref="250" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="btnNao" min="-2" pref="250" max="-2" attributes="0"/>
-                  <Component id="btnSim" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnNao" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                  <Component id="btnSim" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnObrigado" min="-2" pref="250" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnBomDia" min="-2" pref="250" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnQueroIrAoBanheiro" min="-2" pref="250" max="-2" attributes="0"/>
-                  <Component id="btnQueroVerTV" min="-2" pref="250" max="-2" attributes="0"/>
-                  <Component id="btnQueroMeMexer" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnQueroIrAoBanheiro" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                  <Component id="btnQueroMeMexer" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
               </Group>
           </Group>
           <Group type="102" attributes="0">
-              <Component id="btnChameAEnfermeira" min="-2" pref="377" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="btnPrecisoDeAjuda" min="-2" pref="377" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnJogos" min="-2" pref="200" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="btnDesligueALuz" min="-2" pref="200" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="btnObrigado" min="-2" pref="200" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="btnChameAEnfermeira" alignment="0" min="-2" pref="377" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="btnBomDia" min="-2" pref="200" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnQueroVerTV" min="-2" pref="200" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="btnPrecisoDeAjuda" min="-2" pref="377" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,23 +87,33 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnJogos" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
-                  <Component id="btnObrigado" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
-                  <Component id="btnBomDia" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
-                  <Component id="btnQueroVerTV" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
-                  <Component id="btnDesligueALuz" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnObrigado" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="btnJogos" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="btnBomDia" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="btnDesligueALuz" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="btnQueroVerTV" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnQueroIrAoBanheiro" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
-                  <Component id="btnSim" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="btnSim" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnQueroIrAoBanheiro" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnQueroMeMexer" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
-                  <Component id="btnNao" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="btnNao" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnQueroMeMexer" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="174" max="32767" attributes="0"/>
+              <EmptySpace pref="238" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnPrecisoDeAjuda" alignment="3" min="-2" pref="160" max="-2" attributes="0"/>
                   <Component id="btnChameAEnfermeira" alignment="3" min="-2" pref="160" max="-2" attributes="0"/>

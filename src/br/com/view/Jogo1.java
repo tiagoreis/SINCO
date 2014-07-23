@@ -92,14 +92,14 @@ public class Jogo1 extends Panel {
 
         switch (nivel) {
             case 1:
-                retangulo11 = new Rectangle(300, 150, larguraRetanguloPadrao, alturaRetanguloPadrao);
+                retangulo11 = new Rectangle(250, 125, larguraRetanguloPadrao, alturaRetanguloPadrao);
                 corRetangulo11 = Color.black;
-                retangulo12 = new Rectangle(300, 370, larguraRetanguloPadrao, alturaRetanguloPadrao);
+                retangulo12 = new Rectangle(250, 350, larguraRetanguloPadrao, alturaRetanguloPadrao);
                 corRetangulo12 = Color.black;
 
-                retangulo21 = new Rectangle(800, 150, larguraRetanguloPadrao, alturaRetanguloPadrao);
+                retangulo21 = new Rectangle(600, 125, larguraRetanguloPadrao, alturaRetanguloPadrao);
                 corRetangulo21 = Color.black;
-                retangulo22 = new Rectangle(800, 370, larguraRetanguloPadrao, alturaRetanguloPadrao);
+                retangulo22 = new Rectangle(600, 350, larguraRetanguloPadrao, alturaRetanguloPadrao);
                 corRetangulo22 = Color.black;
 
                 addMouseMotionListener(new RectangleHandler());
@@ -153,8 +153,8 @@ public class Jogo1 extends Panel {
         this.alturaTela = ((Toolkit.getDefaultToolkit().getScreenSize()).height);
         this.larguraTela = ((Toolkit.getDefaultToolkit().getScreenSize()).width);
 
-        this.alturaRetanguloPadrao = alturaTela / 4;
-        this.larguraRetanguloPadrao = alturaTela / 4;
+        this.alturaRetanguloPadrao = alturaTela / 5;
+        this.larguraRetanguloPadrao = alturaTela / 5;
 
         this.meiaTelaLargura = this.larguraTela / 2;
         this.fracaoLargura = (this.larguraTela / 2) / 3;

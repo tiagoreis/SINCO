@@ -157,7 +157,8 @@ public class Util {
     }
 
     public JButton localizacaoBotaoVoltar(JButton botao) {
-        botao.setBounds((this.getLarguraTela() - 170), (this.getAlturaTela() - 150), 150, 100);
+        //botao.setBounds((this.getLarguraTela() - 170), (this.getAlturaTela() - 150), 150, 100);
+        botao.setBounds(0, 0, 150, 100);
         return botao;
     }
 

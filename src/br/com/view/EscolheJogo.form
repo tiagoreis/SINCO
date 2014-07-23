@@ -42,32 +42,27 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Component id="btnFase3" min="-2" pref="250" max="-2" attributes="0"/>
-              <EmptySpace pref="262" max="32767" attributes="0"/>
-              <Component id="btnVoltar" min="-2" pref="250" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnFase2" min="-2" pref="250" max="-2" attributes="0"/>
                   <Component id="btnFase1" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase2" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase3" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnVoltar" min="-2" pref="250" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="845" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="btnFase1" min="-2" pref="125" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnFase2" min="-2" pref="125" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnFase3" min="-2" pref="125" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="72" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Component id="btnVoltar" min="-2" pref="125" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnFase1" min="-2" pref="125" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnFase2" min="-2" pref="125" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnFase3" min="-2" pref="125" max="-2" attributes="0"/>
+              <EmptySpace pref="183" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

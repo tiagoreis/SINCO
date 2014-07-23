@@ -120,8 +120,8 @@ public class Jogo3 extends Panel {
 
         private void ajustarTamanhoRetangulo() {
         
-        this.alturaRetanguloPadrao = util.getAlturaTela() / 4;
-        this.larguraRetanguloPadrao = util.getAlturaTela() / 4;
+        this.alturaRetanguloPadrao = util.getAlturaTela() / 5;
+        this.larguraRetanguloPadrao = util.getAlturaTela() / 5;
 
         fracaoLargura = util.getLarguraTela() / 4;
         fracaoLarguraRetangulo = fracaoLargura / 4;
