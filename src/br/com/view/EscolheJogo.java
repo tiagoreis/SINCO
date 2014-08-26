@@ -61,7 +61,7 @@ public class EscolheJogo extends javax.swing.JFrame {
             }
         });
 
-        btnVoltar.setText("Voltar");
+        btnVoltar.setText("Voltar Tela Principal");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
@@ -97,8 +97,6 @@ public class EscolheJogo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
-        // TODO add your handling code here:
-        
         new TelaPrincipal().setVisible(true);
         dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
