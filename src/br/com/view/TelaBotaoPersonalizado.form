@@ -23,6 +23,9 @@
     <Property name="title" type="java.lang.String" value="SINCO"/>
     <Property name="extendedState" type="int" value="100"/>
     <Property name="name" type="java.lang.String" value="framePrincipal" noResource="true"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1024, 768]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -44,40 +47,35 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Component id="btnChameAEnfermeira" min="-2" pref="377" max="-2" attributes="0"/>
+              <Component id="btn7" min="-2" pref="377" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" min="253" max="32767" attributes="0"/>
-              <Component id="btnPrecisoDeAjuda" min="-2" pref="377" max="-2" attributes="0"/>
+              <Component id="btn6" min="-2" pref="377" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Component id="btnVoltar" min="-2" pref="250" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
               <Component id="btn1" min="-2" pref="200" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
-              <Component id="btnBomDia" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+              <Component id="btn2" min="-2" pref="200" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="btnQueroVerTV" min="-2" pref="200" max="-2" attributes="0"/>
+              <Component id="btn3" min="-2" pref="200" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="btnSim" min="-2" pref="200" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
-                      <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="btnJogos" min="-2" pref="200" max="-2" attributes="0"/>
-                  <Component id="btnTecladoVirtual" min="-2" pref="200" max="-2" attributes="0"/>
-              </Group>
+              <Component id="btnEscolheJogo" min="-2" pref="200" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnQueroMeMexer" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
-                  <Component id="btnQueroIrAoBanheiro" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                  <Component id="btn5" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                  <Component id="btn4" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
               </Group>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="btnNao" min="-2" pref="200" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Component id="btnEditarBotoes" min="-2" pref="200" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <Component id="btn9" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btn8" min="-2" pref="200" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -85,152 +83,121 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="btnVoltar" min="-2" pref="125" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
+                  <Component id="btnVoltar" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btn2" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="btn3" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="btn1" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnBomDia" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="btnQueroVerTV" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="btn1" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btn4" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="btn5" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace pref="449" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                      <Component id="btnEditarBotoes" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnEscolheJogo" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btn9" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="btn8" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="115" max="32767" attributes="0"/>
-                      <Component id="btnQueroIrAoBanheiro" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="btnQueroMeMexer" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace pref="334" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="btnJogos" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnTecladoVirtual" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnSim" min="-2" pref="100" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnNao" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace pref="194" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnPrecisoDeAjuda" alignment="3" min="-2" pref="160" max="-2" attributes="0"/>
-                  <Component id="btnChameAEnfermeira" alignment="3" min="-2" pref="160" max="-2" attributes="0"/>
+                  <Component id="btn6" alignment="3" min="-2" pref="160" max="-2" attributes="0"/>
+                  <Component id="btn7" alignment="3" min="-2" pref="160" max="-2" attributes="0"/>
               </Group>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="btnBomDia">
+    <Component class="javax.swing.JButton" name="btn2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Bom Dia!"/>
+        <Property name="text" type="java.lang.String" value="Sem texto"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBomDiaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnSim">
+    <Component class="javax.swing.JButton" name="btn9">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Sim"/>
+        <Property name="text" type="java.lang.String" value="Sem texto"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSimActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn9ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnJogos">
+    <Component class="javax.swing.JButton" name="btnEscolheJogo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Jogos"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnJogosActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEscolheJogoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnPrecisoDeAjuda">
+    <Component class="javax.swing.JButton" name="btn6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Preciso de Ajuda"/>
+        <Property name="text" type="java.lang.String" value="Sem texto"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPrecisoDeAjudaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn6ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btn1">
+    <Component class="javax.swing.JButton" name="btn8">
       <Properties>
-        <Property name="alignmentY" type="float" value="0.0"/>
-        <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
-          <Insets value="[0, 14, 2, 14]"/>
-        </Property>
-        <Property name="verticalAlignment" type="int" value="1"/>
+        <Property name="text" type="java.lang.String" value="Sem texto"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn8ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnNao">
+    <Component class="javax.swing.JButton" name="btn5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
+        <Property name="text" type="java.lang.String" value="Sem texto"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNaoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn5ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnQueroMeMexer">
+    <Component class="javax.swing.JButton" name="btn4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Quero me mexer"/>
+        <Property name="text" type="java.lang.String" value="Sem texto"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnQueroMeMexerActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn4ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnQueroIrAoBanheiro">
+    <Component class="javax.swing.JButton" name="btn3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Quero ir ao banheiro"/>
+        <Property name="text" type="java.lang.String" value="Sem texto"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnQueroIrAoBanheiroActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnQueroVerTV">
+    <Component class="javax.swing.JButton" name="btn7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Quero ver TV"/>
+        <Property name="text" type="java.lang.String" value="Sem texto"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnQueroVerTVActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn7ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnChameAEnfermeira">
+    <Component class="javax.swing.JButton" name="btnEditarBotoes">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Chame a enfermeira"/>
+        <Property name="text" type="java.lang.String" value="Editar bot&#xf5;es"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnChameAEnfermeiraActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnTecladoVirtual">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Teclado Virtual"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTecladoVirtualActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jToggleButton1"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarBotoesActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnVoltar">
@@ -241,12 +208,16 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btn1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Editar"/>
+        <Property name="text" type="java.lang.String" value="Sem texto"/>
+        <Property name="autoscrolls" type="boolean" value="true"/>
+        <Property name="hideActionText" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection component="btn1" name="autoscrolls" type="property"/>
+        </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

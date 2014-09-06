@@ -56,9 +56,12 @@ public class ParserBotao {
         parser.setMode(XStream.NO_REFERENCES);
 
         botoes = listarBotoes();
-
-        for (int i = 0; i < botoes.size(); i++) {
+        //botoes.size()
+        for (int i = 0; i < 12; i++) {
             if (botoes.get(i).getId().equalsIgnoreCase(id)) {
+                if(texto == null || texto.isEmpty()){
+                    texto = "Sem texto";
+                }
                 botoes.get(i).setTexto(texto);
                
             }

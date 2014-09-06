@@ -17,6 +17,7 @@ public class TelaBotaoPersonalizado extends javax.swing.JFrame {
         initComponents();
 
         this.carregarTextoBotao();
+        //ajustarTamanhoBotoes();
     }
 
     @SuppressWarnings("unchecked")
@@ -24,20 +25,18 @@ public class TelaBotaoPersonalizado extends javax.swing.JFrame {
     private void initComponents() {
 
         framePrincipal = new javax.swing.JFrame();
-        btnBomDia = new javax.swing.JButton();
-        btnSim = new javax.swing.JButton();
-        btnJogos = new javax.swing.JButton();
-        btnPrecisoDeAjuda = new javax.swing.JButton();
-        btn1 = new javax.swing.JButton();
-        btnNao = new javax.swing.JButton();
-        btnQueroMeMexer = new javax.swing.JButton();
-        btnQueroIrAoBanheiro = new javax.swing.JButton();
-        btnQueroVerTV = new javax.swing.JButton();
-        btnChameAEnfermeira = new javax.swing.JButton();
-        btnTecladoVirtual = new javax.swing.JButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        btn2 = new javax.swing.JButton();
+        btn9 = new javax.swing.JButton();
+        btnEscolheJogo = new javax.swing.JButton();
+        btn6 = new javax.swing.JButton();
+        btn8 = new javax.swing.JButton();
+        btn5 = new javax.swing.JButton();
+        btn4 = new javax.swing.JButton();
+        btn3 = new javax.swing.JButton();
+        btn7 = new javax.swing.JButton();
+        btnEditarBotoes = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btn1 = new javax.swing.JButton();
 
         javax.swing.GroupLayout framePrincipalLayout = new javax.swing.GroupLayout(framePrincipal.getContentPane());
         framePrincipal.getContentPane().setLayout(framePrincipalLayout);
@@ -54,90 +53,75 @@ public class TelaBotaoPersonalizado extends javax.swing.JFrame {
         setTitle("SINCO");
         setExtendedState(100);
         setName("framePrincipal"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(1024, 768));
 
-        btnBomDia.setText("Bom Dia!");
-        btnBomDia.addActionListener(new java.awt.event.ActionListener() {
+        btn2.setText("Sem texto");
+        btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBomDiaActionPerformed(evt);
+                btn2ActionPerformed(evt);
             }
         });
 
-        btnSim.setText("Sim");
-        btnSim.addActionListener(new java.awt.event.ActionListener() {
+        btn9.setText("Sem texto");
+        btn9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSimActionPerformed(evt);
+                btn9ActionPerformed(evt);
             }
         });
 
-        btnJogos.setText("Jogos");
-        btnJogos.addActionListener(new java.awt.event.ActionListener() {
+        btnEscolheJogo.setText("Jogos");
+        btnEscolheJogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnJogosActionPerformed(evt);
+                btnEscolheJogoActionPerformed(evt);
             }
         });
 
-        btnPrecisoDeAjuda.setText("Preciso de Ajuda");
-        btnPrecisoDeAjuda.addActionListener(new java.awt.event.ActionListener() {
+        btn6.setText("Sem texto");
+        btn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPrecisoDeAjudaActionPerformed(evt);
+                btn6ActionPerformed(evt);
             }
         });
 
-        btn1.setAlignmentY(0.0F);
-        btn1.setMargin(new java.awt.Insets(0, 14, 2, 14));
-        btn1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btn8.setText("Sem texto");
+        btn8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btn8ActionPerformed(evt);
             }
         });
 
-        btnNao.setText("Não");
-        btnNao.addActionListener(new java.awt.event.ActionListener() {
+        btn5.setText("Sem texto");
+        btn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNaoActionPerformed(evt);
+                btn5ActionPerformed(evt);
             }
         });
 
-        btnQueroMeMexer.setText("Quero me mexer");
-        btnQueroMeMexer.addActionListener(new java.awt.event.ActionListener() {
+        btn4.setText("Sem texto");
+        btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnQueroMeMexerActionPerformed(evt);
+                btn4ActionPerformed(evt);
             }
         });
 
-        btnQueroIrAoBanheiro.setText("Quero ir ao banheiro");
-        btnQueroIrAoBanheiro.addActionListener(new java.awt.event.ActionListener() {
+        btn3.setText("Sem texto");
+        btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnQueroIrAoBanheiroActionPerformed(evt);
+                btn3ActionPerformed(evt);
             }
         });
 
-        btnQueroVerTV.setText("Quero ver TV");
-        btnQueroVerTV.addActionListener(new java.awt.event.ActionListener() {
+        btn7.setText("Sem texto");
+        btn7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnQueroVerTVActionPerformed(evt);
+                btn7ActionPerformed(evt);
             }
         });
 
-        btnChameAEnfermeira.setText("Chame a enfermeira");
-        btnChameAEnfermeira.addActionListener(new java.awt.event.ActionListener() {
+        btnEditarBotoes.setText("Editar botões");
+        btnEditarBotoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnChameAEnfermeiraActionPerformed(evt);
-            }
-        });
-
-        btnTecladoVirtual.setText("Teclado Virtual");
-        btnTecladoVirtual.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTecladoVirtualActionPerformed(evt);
-            }
-        });
-
-        jToggleButton1.setText("jToggleButton1");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                btnEditarBotoesActionPerformed(evt);
             }
         });
 
@@ -148,10 +132,12 @@ public class TelaBotaoPersonalizado extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Editar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn1.setText("Sem texto");
+        btn1.setAutoscrolls(true);
+        btn1.setHideActionText(btn1.getAutoscrolls());
+        btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn1ActionPerformed(evt);
             }
         });
 
@@ -160,144 +146,118 @@ public class TelaBotaoPersonalizado extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(btnChameAEnfermeira, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn7, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(121, 121, 121)
                 .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addGap(89, 89, 89)
-                .addComponent(btnBomDia, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnQueroVerTV, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(161, 161, 161)
-                        .addComponent(jToggleButton1))
-                    .addComponent(btnJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnTecladoVirtual, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnEscolheJogo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnQueroMeMexer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnQueroIrAoBanheiro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btn5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEditarBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(btn9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 4, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnBomDia, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnQueroVerTV, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
-                        .addComponent(btnQueroIrAoBanheiro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
-                        .addComponent(btnQueroMeMexer, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 334, Short.MAX_VALUE))
+                        .addComponent(btn5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 449, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(btnJogos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)
+                        .addComponent(btnEditarBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnTecladoVirtual, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jToggleButton1)
-                            .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)))
+                        .addComponent(btnEscolheJogo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnChameAEnfermeira, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn7, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnJogosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJogosActionPerformed
+    private void btnEscolheJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscolheJogoActionPerformed
         new EscolheJogo().setVisible(true);
         dispose();
-    }//GEN-LAST:event_btnJogosActionPerformed
+    }//GEN-LAST:event_btnEscolheJogoActionPerformed
 
 
-    private void btnBomDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBomDiaActionPerformed
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         audio.tocarAudio("bomdia");
-    }//GEN-LAST:event_btnBomDiaActionPerformed
+    }//GEN-LAST:event_btn2ActionPerformed
 
-    private void btnSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimActionPerformed
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
         audio.tocarAudio("sim");
-    }//GEN-LAST:event_btnSimActionPerformed
+    }//GEN-LAST:event_btn9ActionPerformed
 
-    private void btnPrecisoDeAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrecisoDeAjudaActionPerformed
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
         audio.tocarAudio("precisodeajuda");
-    }//GEN-LAST:event_btnPrecisoDeAjudaActionPerformed
+    }//GEN-LAST:event_btn6ActionPerformed
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        audio.tocarAudio("obrigado");
-    }//GEN-LAST:event_btn1ActionPerformed
-
-    private void btnNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNaoActionPerformed
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
         audio.tocarAudio("nao");
-    }//GEN-LAST:event_btnNaoActionPerformed
+    }//GEN-LAST:event_btn8ActionPerformed
 
-    private void btnQueroMeMexerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQueroMeMexerActionPerformed
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
         audio.tocarAudio("queromemexer");
-    }//GEN-LAST:event_btnQueroMeMexerActionPerformed
+    }//GEN-LAST:event_btn5ActionPerformed
 
-    private void btnQueroIrAoBanheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQueroIrAoBanheiroActionPerformed
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         audio.tocarAudio("queroiraobanheiro");
-    }//GEN-LAST:event_btnQueroIrAoBanheiroActionPerformed
+    }//GEN-LAST:event_btn4ActionPerformed
 
-    private void btnQueroVerTVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQueroVerTVActionPerformed
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         audio.tocarAudio("querovertv");
-    }//GEN-LAST:event_btnQueroVerTVActionPerformed
+    }//GEN-LAST:event_btn3ActionPerformed
 
-    private void btnChameAEnfermeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChameAEnfermeiraActionPerformed
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
         audio.tocarAudio("chameaenfermeira");
-    }//GEN-LAST:event_btnChameAEnfermeiraActionPerformed
+    }//GEN-LAST:event_btn7ActionPerformed
 
-    private void btnTecladoVirtualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTecladoVirtualActionPerformed
+    private void btnEditarBotoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarBotoesActionPerformed
+                TelaEditarBotao tela = new TelaEditarBotao();
+        tela.setIdBotao("btn1");
+        tela.setVisible(true);
         
-        
-    }//GEN-LAST:event_btnTecladoVirtualActionPerformed
+    }//GEN-LAST:event_btnEditarBotoesActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         new TelaPrincipal().setVisible(true);
         dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-
-        //this.txtNomeNovoBotao.setVisible(true);
-        TelaTextoBotao tela = new TelaTextoBotao();
-        tela.setIdBotao("btn1");
-        tela.setVisible(true);
-        //        new TelaTextoBotao().setVisible(true);
-
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaTextoBotao tela = new TelaTextoBotao();
-        tela.setIdBotao("btn1");
-        tela.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn1ActionPerformed
 
 
     
@@ -337,20 +297,18 @@ public class TelaBotaoPersonalizado extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn1;
-    private javax.swing.JButton btnBomDia;
-    private javax.swing.JButton btnChameAEnfermeira;
-    private javax.swing.JButton btnJogos;
-    private javax.swing.JButton btnNao;
-    private javax.swing.JButton btnPrecisoDeAjuda;
-    private javax.swing.JButton btnQueroIrAoBanheiro;
-    private javax.swing.JButton btnQueroMeMexer;
-    private javax.swing.JButton btnQueroVerTV;
-    private javax.swing.JButton btnSim;
-    private javax.swing.JButton btnTecladoVirtual;
+    private javax.swing.JButton btn2;
+    private javax.swing.JButton btn3;
+    private javax.swing.JButton btn4;
+    private javax.swing.JButton btn5;
+    private javax.swing.JButton btn6;
+    private javax.swing.JButton btn7;
+    private javax.swing.JButton btn8;
+    private javax.swing.JButton btn9;
+    private javax.swing.JButton btnEditarBotoes;
+    private javax.swing.JButton btnEscolheJogo;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JFrame framePrincipal;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 
     private void carregarTextoBotao() {
@@ -361,11 +319,49 @@ public class TelaBotaoPersonalizado extends javax.swing.JFrame {
         for (int i = 0; i < botoes.size(); i++) {
             
             String idBotao = botoes.get(i).getId();
+            String texto = botoes.get(i).getTexto();
+            if(texto.length() > 10){
+                int idx = texto.indexOf(" "); 
+            }
+            
             
             switch (idBotao) { 
-                case "btn1" : btn1.setText(botoes.get(i).getTexto());
-
+                case "btn1" : btn1.setText(texto);
+                btn1.setToolTipText(texto);
                 break;    
+                
+                case "btn2" : btn2.setText(botoes.get(i).getTexto());
+                btn2.setToolTipText(texto);
+                break;    
+                
+                case "btn3" : btn3.setText(botoes.get(i).getTexto());
+                btn3.setToolTipText(texto);
+                break;    
+                
+                case "btn4" : btn4.setText(botoes.get(i).getTexto());
+                btn4.setToolTipText(texto);
+                break;    
+                
+                case "btn5" : btn5.setText(botoes.get(i).getTexto());
+                btn5.setToolTipText(texto);
+                break;    
+                
+                case "btn6" : btn6.setText(botoes.get(i).getTexto());
+                btn6.setToolTipText(texto);
+                break;    
+                
+                case "btn7" : btn7.setText(botoes.get(i).getTexto());
+                btn7.setToolTipText(texto);
+                break;    
+                
+                case "btn8" : btn8.setText(botoes.get(i).getTexto());
+                btn8.setToolTipText(texto);
+                break;    
+
+                case "btn9" : btn9.setText(botoes.get(i).getTexto());
+                btn9.setToolTipText(texto);
+                break;    
+                    
             }
            // System.out.println("botao " + botoes.get(i).getId());
 
@@ -374,26 +370,21 @@ public class TelaBotaoPersonalizado extends javax.swing.JFrame {
         
     }
 
-      public void alterarTextBotao(String botao ,String texto){
-//        btnTecladoVirtual.setText(texto);
-        System.out.println("texto " + texto);
-//        ControleBotaoNovo controle = new ControleBotaoNovo();
-//        btnSim.setText(controle.getTextoBotao());
-//        btnSim.setText("tiago");
+    private void ajustarTamanhoBotoes() {
         
-//        TelaBotaoPersonalizado.this.invalidate();
-//        TelaBotaoPersonalizado.this.validate();
-//        TelaBotaoPersonalizado.this.repaint();
-//        
-//        TelaBotaoPersonalizado.this.btnNao.setText("naonao");
-        
-//        TelaBotaoPersonalizado tela = new TelaBotaoPersonalizado();
-//        tela.btnNao.setText("11111");
-//        tela.repaint();
-//        super.repaint();
-//        tela.getContentPane().invalidate();
-//        tela.getContentPane().validate();
-//        tela.getContentPane().repaint();
+             btn1.setSize(100, 50);
+             btn2.setSize(100, 50);
+             btn3.setSize(100, 50);
+            btn4.setSize(100, 50);
+            btn5.setSize(100, 50);
+            btn6.setSize(100, 50);
+             btn7.setSize(100, 50);
+             btn8.setSize(100, 50);
+             btn9.setSize(100, 50);
+             btnEditarBotoes.setSize(100, 50);
+             btnEscolheJogo.setSize(100, 50);
+             btnVoltar.setSize(100, 50);
+
     }
             
     

@@ -118,6 +118,13 @@
           <ComponentRef name="groupRadioBtn"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdBtn1ActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="rdBtn1.setSelected(true);"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JRadioButton()"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn2">
       <Properties>
@@ -127,27 +134,77 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn3">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="groupRadioBtn"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn4">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="groupRadioBtn"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn5">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="groupRadioBtn"/>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdBtn5ActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn6">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="groupRadioBtn"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn7">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="groupRadioBtn"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn8">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="groupRadioBtn"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn9">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="groupRadioBtn"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn10">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="groupRadioBtn"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn11">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="groupRadioBtn"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdBtn12">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="groupRadioBtn"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

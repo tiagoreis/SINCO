@@ -1,6 +1,7 @@
 package br.com.view;
 
 import br.com.audio.Audio;
+import java.awt.Color;
 
 public class TelaPrincipal extends javax.swing.JFrame {
 //http://www.edu4java.com/en/game/game2.html
@@ -9,6 +10,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public TelaPrincipal() {
         setExtendedState(MAXIMIZED_BOTH);
         initComponents();
+        personalizarBotoes();
 
     }
 
@@ -28,7 +30,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnDesligueALuz = new javax.swing.JButton();
         btnQueroVerTV = new javax.swing.JButton();
         btnChameAEnfermeira = new javax.swing.JButton();
-        btnTecladoVirtual = new javax.swing.JButton();
         btnBotaoPersonalizado = new javax.swing.JButton();
 
         javax.swing.GroupLayout framePrincipalLayout = new javax.swing.GroupLayout(framePrincipal.getContentPane());
@@ -125,13 +126,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnTecladoVirtual.setText("Teclado Virtual");
-        btnTecladoVirtual.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTecladoVirtualActionPerformed(evt);
-            }
-        });
-
         btnBotaoPersonalizado.setText("Botões Personalizados");
         btnBotaoPersonalizado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,16 +156,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnBotaoPersonalizado, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnQueroIrAoBanheiro, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(btnTecladoVirtual, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnQueroMeMexer, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -190,17 +182,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnQueroIrAoBanheiro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
-                        .addComponent(btnQueroMeMexer, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(btnQueroMeMexer, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnBotaoPersonalizado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnTecladoVirtual, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(btnSim, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
                 .addComponent(btnNao, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(96, 96, 96)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPrecisoDeAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnChameAEnfermeira, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -256,11 +245,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         audio.tocarAudio("chameaenfermeira");
     }//GEN-LAST:event_btnChameAEnfermeiraActionPerformed
 
-    private void btnTecladoVirtualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTecladoVirtualActionPerformed
-        
-        
-    }//GEN-LAST:event_btnTecladoVirtualActionPerformed
-
     private void btnBotaoPersonalizadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBotaoPersonalizadoActionPerformed
         
         new TelaBotaoPersonalizado().setVisible(true);
@@ -314,8 +298,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnQueroMeMexer;
     private javax.swing.JButton btnQueroVerTV;
     private javax.swing.JButton btnSim;
-    private javax.swing.JButton btnTecladoVirtual;
     private javax.swing.JFrame framePrincipal;
     // End of variables declaration//GEN-END:variables
+
+    private void personalizarBotoes() {
+        
+        btnChameAEnfermeira.setBackground(Color.red);
+        btnPrecisoDeAjuda.setBackground(Color.MAGENTA);
+        btnJogos.setBackground(Color.BLUE);
+        
+    }
 
 }

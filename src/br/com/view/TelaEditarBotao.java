@@ -10,19 +10,20 @@ import br.com.util.ControleBotaoNovo;
 import br.com.util.ParserBotao;
 import br.com.view.TelaBotaoPersonalizado;
 import java.util.List;
+import javax.swing.ButtonModel;
 
-public class TelaTextoBotao extends javax.swing.JFrame {
+public class TelaEditarBotao extends javax.swing.JFrame {
 
     private String idBotao;
+    private int quantidadeBotoes = 12;
 
     /**
      * Creates new form TelaTextoBotao
      */
-    public TelaTextoBotao() {
+    public TelaEditarBotao() {
         initComponents();
 
         carregarTextoBotao();
-
     }
 
     /**
@@ -65,14 +66,38 @@ public class TelaTextoBotao extends javax.swing.JFrame {
         });
 
         groupRadioBtn.add(rdBtn1);
+        rdBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdBtn1ActionPerformed(evt);
+            }
+        });
 
         groupRadioBtn.add(rdBtn2);
 
+        groupRadioBtn.add(rdBtn3);
+
+        groupRadioBtn.add(rdBtn4);
+
+        groupRadioBtn.add(rdBtn5);
         rdBtn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdBtn5ActionPerformed(evt);
             }
         });
+
+        groupRadioBtn.add(rdBtn6);
+
+        groupRadioBtn.add(rdBtn7);
+
+        groupRadioBtn.add(rdBtn8);
+
+        groupRadioBtn.add(rdBtn9);
+
+        groupRadioBtn.add(rdBtn10);
+
+        groupRadioBtn.add(rdBtn11);
+
+        groupRadioBtn.add(rdBtn12);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,21 +157,28 @@ public class TelaTextoBotao extends javax.swing.JFrame {
                 .addContainerGap(74, Short.MAX_VALUE))
         );
 
+        rdBtn1.setSelected(true);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
 
         String texto = txtTextoBotaoNovo.getText();
-        System.out.println("getIdBotao()" + getIdBotao() + " - " + texto);
+        ButtonModel sel = groupRadioBtn.getSelection();
+        //String id = sel.toString();
+        
+        String id = radioSelecionado();
+        
+        System.out.println("id " +id );
 //        ControleBotaoNovo controle = new ControleBotaoNovo();
 //        controle.setTextoBotao(texto);
 
         ParserBotao parser = new ParserBotao();
-        parser.gravaCadastro(getIdBotao(), texto);
+        parser.gravaCadastro(id, texto);
 
-        TelaBotaoPersonalizado tela = new TelaBotaoPersonalizado();
-        tela.alterarTextBotao(texto, texto);
+//        TelaBotaoPersonalizado tela = new TelaBotaoPersonalizado();
+//        tela.alterarTextBotao(texto, texto);
 
         dispose();
 
@@ -156,6 +188,10 @@ public class TelaTextoBotao extends javax.swing.JFrame {
     private void rdBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdBtn5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rdBtn5ActionPerformed
+
+    private void rdBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdBtn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,20 +210,20 @@ public class TelaTextoBotao extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaTextoBotao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaEditarBotao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaTextoBotao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaEditarBotao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaTextoBotao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaEditarBotao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaTextoBotao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaEditarBotao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaTextoBotao().setVisible(true);
+                new TelaEditarBotao().setVisible(true);
             }
         });
     }
@@ -276,6 +312,37 @@ public class TelaTextoBotao extends javax.swing.JFrame {
             }
         }
 
+    }
+
+    private String radioSelecionado() {
+        String idBotao = "btn1";
+      
+        if(rdBtn1.isSelected()){
+            idBotao = "btn1";
+        } else if(rdBtn2.isSelected()) {
+            idBotao = "btn2";
+        } else if(rdBtn3.isSelected()) {
+            idBotao = "btn3";
+        } else if(rdBtn4.isSelected()) {
+            idBotao = "btn4";
+        } else if(rdBtn5.isSelected()) {
+            idBotao = "btn5";
+        } else if(rdBtn6.isSelected()) {
+            idBotao = "btn6";
+        } else if(rdBtn7.isSelected()) {
+            idBotao = "btn7";
+        } else if(rdBtn8.isSelected()) {
+            idBotao = "btn8";
+        } else if(rdBtn9.isSelected()) {
+            idBotao = "btn9";
+        } else if(rdBtn10.isSelected()) {
+            idBotao = "btn10";
+        } else if(rdBtn11.isSelected()) {
+            idBotao = "btn11";
+        } else if(rdBtn12.isSelected()) {
+            idBotao = "btn12";
+        }
+        return idBotao;
     }
 
 }
