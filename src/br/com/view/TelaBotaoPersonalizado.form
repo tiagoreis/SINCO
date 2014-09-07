@@ -92,13 +92,12 @@
               </Group>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Component id="btn4" min="-2" pref="100" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="btn5" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace pref="449" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Component id="btnEditarBotoes" min="-2" pref="100" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -108,9 +107,9 @@
                           <Component id="btn9" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="btn8" alignment="3" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btn6" alignment="3" min="-2" pref="160" max="-2" attributes="0"/>
                   <Component id="btn7" alignment="3" min="-2" pref="160" max="-2" attributes="0"/>

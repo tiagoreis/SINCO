@@ -16,38 +16,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class ParserBotao {
-
-    public void gravaListaCompleta() {
-
-        List<Botao> botoes = new ArrayList<Botao>();
-        XStream parser = new XStream(new DomDriver());
-        parser.setMode(XStream.NO_REFERENCES);
-
-        Botao botao1 = new Botao();
-        botao1.setTexto("Andii");
-
-        Botao botao2 = new Botao();
-        botao2.setTexto("Maria");
-
-        botoes.add(botao1);
-        botoes.add(botao2);
-
-        XStream xStream = new XStream();
-
-        xStream.alias("botoes", List.class);
-        xStream.alias("botao", Botao.class);
-
-        File arquivo = new File("botoes.xml");
-        FileOutputStream gravar;
-        try {
-            gravar = new FileOutputStream(arquivo);
-            gravar.write(xStream.toXML(botoes).getBytes());
-            gravar.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-    }
+    
+    private String caminhoXmlBotao = "src/br/com/xml/botoes.xml";
 
     public void gravaCadastro(String id,String texto) {
 
@@ -72,7 +42,7 @@ public class ParserBotao {
         xStream.alias("botoes", List.class);
         xStream.alias("botao", Botao.class);
 
-        File arquivo = new File("botoes.xml");
+        File arquivo = new File(caminhoXmlBotao);
         FileOutputStream gravar;
         try {
             gravar = new FileOutputStream(arquivo);
@@ -85,7 +55,7 @@ public class ParserBotao {
     }
 
     public void lerArquivo() {
-        String arquivoXML = "botoes.xml";
+        String arquivoXML = caminhoXmlBotao;
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
@@ -154,7 +124,7 @@ public class ParserBotao {
     }
 
     public List<Botao> listarBotoes() {
-        String arquivoXML = "botoes.xml";
+        String arquivoXML = caminhoXmlBotao;
         List<Botao> botoes = new ArrayList<Botao>();
 
         try {
