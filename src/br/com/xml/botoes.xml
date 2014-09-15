@@ -1,50 +1,50 @@
 <botoes>
   <botao>
     <id>btn1</id>
-    <texto>Sem textoSem textoSem textoSem textoSem textoSem texto</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn2</id>
-    <texto>bbb</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn3</id>
-    <texto>ccc</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn4</id>
-    <texto>444</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn5</id>
-    <texto>eee</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn6</id>
-    <texto>btn6</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn7</id>
-    <texto>btn7</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn8</id>
-    <texto>btn8</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn9</id>
-    <texto>btn9</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn10</id>
-    <texto>btn10</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn11</id>
-    <texto>btn11</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
   <botao>
     <id>btn12</id>
-    <texto>asasa</texto>
+    <texto>Botão Personalizado</texto>
   </botao>
 </botoes>
