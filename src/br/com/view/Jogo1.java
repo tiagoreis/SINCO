@@ -1,6 +1,7 @@
 package br.com.view;
 
 import br.com.util.Util;
+import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -41,10 +42,6 @@ public class Jogo1 extends Panel {
 
     Map<String, String> valores = new HashMap<String, String>();
 
-    Rectangle2D retangulo2D11;
-    Color corRetangulo2D11;
-    JLabel labelRetangulo2D11 = new JLabel();
-    
     Rectangle retangulo11;
     Rectangle retangulo12;
     Rectangle retangulo13;
@@ -72,6 +69,8 @@ public class Jogo1 extends Panel {
     Color corRetangulo24;
 
     JButton btnVoltar = new JButton("Voltar");
+    JButton btnZerar = new JButton("Zerar Jogo");
+    
     Util util = new Util();
     private static final long serialVersionUID = 8067455339781596616L;
 
@@ -92,73 +91,31 @@ public class Jogo1 extends Panel {
 
     public void MontarRetangulo() {
 
-        int nivel = 1;
+        retangulo11 = new Rectangle(250, 125, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo11 = Color.black;
 
-        switch (nivel) {
-            case 1:
-                retangulo11 = new Rectangle(250, 125, larguraRetanguloPadrao, alturaRetanguloPadrao);
-                corRetangulo11 = Color.black;
-//                JLabel label = new JLabel();
-//                Font f = new Font("Arial Black", Font.BOLD, 20); 
-                Font f = new Font("Arial Black", 0, 0);
-                
-//                Font fonte = new Font(null, nivel, nivel)
-                labelRetangulo2D11.setFont(new Font("Serif", Font.PLAIN, 14));
-//                labelRetangulo2D11.setFont(f); 
-                labelRetangulo2D11.setText("1");
-                
-//                labelRetangulo2D11.setBackground(Color.white);
-                labelRetangulo2D11.setForeground(Color.white);
-                
-                
-                
-                retangulo2D11 = new Rectangle2D(400, 400, larguraRetanguloPadrao, alturaRetanguloPadrao);
-                
-                
-                Text text = new Text("tiago");
-                
-                
-                
-                corRetangulo2D11 = Color.BLUE;
-                
-                
-                retangulo12 = new Rectangle(250, 350, larguraRetanguloPadrao, alturaRetanguloPadrao);
-                corRetangulo12 = Color.black;
-                
+        retangulo12 = new Rectangle(250, 350, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo12 = Color.black;
 
-                retangulo21 = new Rectangle(600, 125, larguraRetanguloPadrao, alturaRetanguloPadrao);
-                corRetangulo21 = Color.black;
-                retangulo22 = new Rectangle(600, 350, larguraRetanguloPadrao, alturaRetanguloPadrao);
-                corRetangulo22 = Color.black;
 
-                addMouseMotionListener(new RectangleHandler());
+        retangulo21 = new Rectangle(600, 125, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo21 = Color.black;
+        retangulo22 = new Rectangle(600, 350, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo22 = Color.black;
 
-                break;
-        }
+        addMouseMotionListener(new RectangleHandler());
+
     }
 
     public void paint(Graphics grafico) {
 
 
-        grafico.setColor(corRetangulo2D11);
-//        grafico.drawString("111", (int)retangulo2D11.getMaxX(), (int)retangulo2D11.getMaxY());
-//        System.out.println("(int)retangulo2D11.getMinX() " +(int)retangulo2D11.getMinX() +" - "+(int)retangulo2D11.getMinY());
-//        System.out.println("(int)retangulo2D11.getMaxX() " +(int)retangulo2D11.getMaxX() +" - "+(int)retangulo2D11.getMaxY());
-        grafico.fillRect((int)retangulo2D11.getMinX(), (int)retangulo2D11.getMinY(), (int)retangulo2D11.getWidth(), (int)retangulo2D11.getHeight());
-        grafico.drawString(labelRetangulo2D11.getText(), (int)retangulo2D11.getMinX() + 175, (int)retangulo2D11.getMinY() + 175);
-        
         grafico.setColor(corRetangulo11);
         grafico.fillRect(retangulo11.x, retangulo11.y, retangulo11.width, retangulo11.height);
         
         grafico.setColor(corRetangulo12);
         grafico.fillRect(retangulo12.x, retangulo12.y, retangulo12.width,
                 retangulo12.height);
-        // grafico.setColor(corRetangulo13);
-        // grafico.fillRect(retangulo13.x, retangulo13.y, retangulo13.width,
-        // retangulo13.height);
-        // grafico.setColor(corRetangulo14);
-        // grafico.fillRect(retangulo14.x, retangulo14.y, retangulo14.width,
-        // retangulo14.height);
 
         grafico.setColor(corRetangulo21);
         grafico.fillRect(retangulo21.x, retangulo21.y, retangulo21.width,
@@ -166,16 +123,6 @@ public class Jogo1 extends Panel {
         grafico.setColor(corRetangulo22);
         grafico.fillRect(retangulo22.x, retangulo22.y, retangulo22.width,
                 retangulo22.height);
-        // grafico.setColor(corRetangulo23);
-        // grafico.fillRect(retangulo23.x, retangulo23.y, retangulo23.width,
-        // retangulo23.height);
-        // grafico.setColor(corRetangulo24);
-        // grafico.fillRect(retangulo24.x, retangulo24.y, retangulo24.width,
-        // retangulo24.height);
-
-
-        
-
     }
 
     private void AjustarCursosMouse() {
@@ -183,8 +130,7 @@ public class Jogo1 extends Panel {
         try {
             Robot robot = new Robot();
             robot.mouseMove(0, 0);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (AWTException e) {
         }
 
     }
@@ -216,11 +162,11 @@ public class Jogo1 extends Panel {
 
             TimerTask tarefa = new TimerTask() {
 
+                @Override
                 public void run() {
                     try {
                         System.out.println("Hora: " + format.format(new Date().getTime()));
                     } catch (Exception e) {
-                        e.printStackTrace();
                     }
                 }
 

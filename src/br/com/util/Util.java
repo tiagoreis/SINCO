@@ -17,6 +17,8 @@ import javax.swing.JLabel;
 public class Util {
 
     JButton btnVoltar = new JButton("Voltar");
+    JButton btnZerar = new JButton("Zerar Jogo");
+    
     private int alturaTela;
     private int larguraTela;
     static JFrame frame;
@@ -38,9 +40,11 @@ public class Util {
 //        lblCronometro = licalizacaoCronometro(lblCronometro);
 //        frame.add(lblCronometro);
         btnVoltar = localizacaoBotaoVoltar(btnVoltar);
+        btnZerar = localizacaoBotaoZerar(btnZerar);
 //        btnVoltar.setBounds((this.getLarguraTela() - 170), 10, 150, 100);
 
         frame.add(btnVoltar, BorderLayout.CENTER);
+        frame.add(btnZerar, BorderLayout.CENTER);
         frame.add(new Jogo1());
         frame.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -159,6 +163,12 @@ public class Util {
     public JButton localizacaoBotaoVoltar(JButton botao) {
         //botao.setBounds((this.getLarguraTela() - 170), (this.getAlturaTela() - 150), 150, 100);
         botao.setBounds(0, 0, 150, 100);
+        return botao;
+    }
+    
+    public JButton localizacaoBotaoZerar(JButton botao) {
+        //botao.setBounds((this.getLarguraTela() - 170), (this.getAlturaTela() - 150), 150, 100);
+        botao.setBounds(0, (this.getAlturaTela() - 150), 150, 100);
         return botao;
     }
 

@@ -43,26 +43,63 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnFase1" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnVoltar" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase1" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                   <Component id="btnFase2" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                   <Component id="btnFase3" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                  <Component id="btnVoltar" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase4" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="845" max="32767" attributes="0"/>
+              <EmptySpace pref="189" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnFase9" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase5" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase6" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase7" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase8" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnFase13" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase12" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase11" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase14" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
+                  <Component id="btnFase10" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="btnVoltar" min="-2" pref="125" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnVoltar" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnFase5" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnFase10" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnFase1" min="-2" pref="125" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnFase2" min="-2" pref="125" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnFase3" min="-2" pref="125" max="-2" attributes="0"/>
-              <EmptySpace pref="183" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnFase1" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnFase6" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnFase11" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnFase2" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnFase7" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnFase12" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnFase3" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnFase8" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnFase13" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="38" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnFase4" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnFase9" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="btnFase14" alignment="3" min="-2" pref="125" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -98,6 +135,94 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVoltarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 4"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase4ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 5"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase5ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 6"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase6ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 7"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase7ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 8"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase8ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 9"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase9ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 10"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase10ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 11"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase11ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase12">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 12"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase12ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase13">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 13"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase13ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFase14">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fase 14"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFase14ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
