@@ -4,6 +4,7 @@ import br.com.view.EscolheJogo;
 import br.com.view.*;
 import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 import java.awt.BorderLayout;
+import java.awt.Frame;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
@@ -172,13 +173,47 @@ public class Util {
         return botao;
     }
 
+
+    
+        public JFrame montarFrameGenericoJogo14() {
+        frame = new JFrame();
+
+        btnVoltar = localizacaoBotaoVoltar(btnVoltar);
+        
+        frame.add(btnVoltar, BorderLayout.CENTER);
+        frame.add(new Jogo14());
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.setExtendedState(MAXIMIZED_BOTH);
+
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+                try {
+                    new EscolheJogo().setVisible(true);
+                    dispose();
+                    frame.setVisible(false);
+
+                } catch (Exception ex) {
+                    Logger.getLogger(Jogo14.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+
+        });
+        return frame;
+    }
     private JLabel licalizacaoCronometro(JLabel label) {
         label.setBounds(0, (this.getAlturaTela() - 50), 50, 20);
         label.setText("00:00:00"); // NOI18N
         
         return label;
     }
-    
     
     
 

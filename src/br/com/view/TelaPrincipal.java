@@ -2,15 +2,18 @@ package br.com.view;
 
 import br.com.audio.Audio;
 import java.awt.Color;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 
 public class TelaPrincipal extends javax.swing.JFrame {
 //http://www.edu4java.com/en/game/game2.html
+
     Audio audio = new Audio();
 
     public TelaPrincipal() {
         setExtendedState(MAXIMIZED_BOTH);
         initComponents();
-       //personalizarBotoes();
+        personalizarBotoes();
 
     }
 
@@ -244,10 +247,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnChameAEnfermeiraActionPerformed
 
     private void btnBotaoPersonalizadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBotaoPersonalizadoActionPerformed
-        
+
         new TelaBotaoPersonalizado().setVisible(true);
         dispose();
-        
+
     }//GEN-LAST:event_btnBotaoPersonalizadoActionPerformed
 
     public static void main(String args[]) {
@@ -300,11 +303,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void personalizarBotoes() {
-        
-        btnChameAEnfermeira.setBackground(Color.red);
-        btnPrecisoDeAjuda.setBackground(Color.MAGENTA);
-        btnJogos.setBackground(Color.BLUE);
-        
+     
+        Border borda = new LineBorder(Color.WHITE, 2);
+        btnSim.setBorder(borda);
+        btnBomDia.setBorder(borda);
+        btnBotaoPersonalizado.setBorder(borda);
+        btnChameAEnfermeira.setBorder(borda);
+        btnDesligueALuz.setBorder(borda);
+        btnJogos.setBorder(borda);
+        btnNao.setBorder(borda);
+        btnObrigado.setBorder(borda);
+        btnPrecisoDeAjuda.setBorder(borda);
+        btnQueroIrAoBanheiro.setBorder(borda);
+        btnQueroMeMexer.setBorder(borda);
+        btnQueroVerTV.setBorder(borda);
+
     }
 
 }

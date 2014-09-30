@@ -4,8 +4,11 @@ import br.com.audio.Audio;
 import br.com.util.Botao;
 import br.com.util.ControleBotaoNovo;
 import br.com.util.ParserBotao;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 import org.w3c.dom.NodeList;
 
 public class TelaBotaoPersonalizado extends javax.swing.JFrame {
@@ -18,6 +21,7 @@ public class TelaBotaoPersonalizado extends javax.swing.JFrame {
 
         this.carregarTextoBotao();
         //ajustarTamanhoBotoes();
+        personalizarBotoes();
     }
 
     @SuppressWarnings("unchecked")
@@ -371,21 +375,39 @@ public class TelaBotaoPersonalizado extends javax.swing.JFrame {
 
     private void ajustarTamanhoBotoes() {
         
-             btn1.setSize(100, 50);
-             btn2.setSize(100, 50);
-             btn3.setSize(100, 50);
-            btn4.setSize(100, 50);
-            btn5.setSize(100, 50);
-            btn6.setSize(100, 50);
-             btn7.setSize(100, 50);
-             btn8.setSize(100, 50);
-             btn9.setSize(100, 50);
-             btnEditarBotoes.setSize(100, 50);
-             btnEscolheJogo.setSize(100, 50);
-             btnVoltar.setSize(100, 50);
+        btn1.setSize(100, 50);
+        btn2.setSize(100, 50);
+        btn3.setSize(100, 50);
+        btn4.setSize(100, 50);
+        btn5.setSize(100, 50);
+        btn6.setSize(100, 50);
+        btn7.setSize(100, 50);
+        btn8.setSize(100, 50);
+        btn9.setSize(100, 50);
+        btnEditarBotoes.setSize(100, 50);
+        btnEscolheJogo.setSize(100, 50);
+        btnVoltar.setSize(100, 50);
 
     }
-            
+   
+    private void personalizarBotoes() {
+     
+        Border borda = new LineBorder(Color.WHITE, 2);
+        btn1.setBorder(borda);
+        btn2.setBorder(borda);
+        btn3.setBorder(borda);
+        btn4.setBorder(borda);
+        btn5.setBorder(borda);
+        btn6.setBorder(borda);
+        btn7.setBorder(borda);
+        btn8.setBorder(borda);
+        btn9.setBorder(borda);
+        btnEditarBotoes.setBorder(borda);
+        btnEscolheJogo.setBorder(borda);
+        btnVoltar.setBorder(borda);
+        
+    }
+
     
     
       

@@ -49,7 +49,7 @@
                   <Component id="btnFase3" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                   <Component id="btnFase4" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="189" max="32767" attributes="0"/>
+              <EmptySpace pref="150" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnFase9" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                   <Component id="btnFase5" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
@@ -57,7 +57,7 @@
                   <Component id="btnFase7" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                   <Component id="btnFase8" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
+              <EmptySpace pref="150" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnFase13" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
                   <Component id="btnFase12" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
