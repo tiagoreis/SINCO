@@ -1,5 +1,9 @@
 package br.com.view;
 
+import java.awt.Color;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
+
 public class EscolheJogo extends javax.swing.JFrame {
 
     /**
@@ -8,6 +12,7 @@ public class EscolheJogo extends javax.swing.JFrame {
     public EscolheJogo() {
         setExtendedState(MAXIMIZED_BOTH);
         initComponents();
+         personalizarBotoes();
     }
 
     public void start(){
@@ -307,4 +312,25 @@ public class EscolheJogo extends javax.swing.JFrame {
     private javax.swing.JButton btnVoltar;
     private javax.swing.JFrame framePrincipal;
     // End of variables declaration//GEN-END:variables
+
+    private void personalizarBotoes() {
+     
+        Border borda = new LineBorder(Color.WHITE, 2);
+        btnFase1.setBorder(borda);
+        btnFase2.setBorder(borda);
+        btnFase3.setBorder(borda);
+        btnFase4.setBorder(borda);
+        btnFase5.setBorder(borda);
+        btnFase6.setBorder(borda);
+        btnFase7.setBorder(borda);
+        btnFase8.setBorder(borda);
+        btnFase9.setBorder(borda);
+        btnFase10.setBorder(borda);
+        btnFase11.setBorder(borda);
+        btnFase12.setBorder(borda);
+        btnFase13.setBorder(borda);
+        btnFase14.setBorder(borda);
+        btnVoltar.setBorder(borda);
+        
+    }
 }

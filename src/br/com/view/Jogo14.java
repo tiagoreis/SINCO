@@ -225,7 +225,7 @@ public class Jogo14 extends Panel {
         int posicaoY35 = (fracaoAlturaRetangulo + (fracaoAltura * 4));
         int posicaoY36 = (fracaoAlturaRetangulo + (fracaoAltura * 5));
         
-        int posicaoXColuna4 = fracaoLarguraRetangulo + (fracaoLargura * 2);
+        int posicaoXColuna4 = fracaoLarguraRetangulo + fracaoLargura + (fracaoLargura* 2);
         int posicaoY41 = fracaoAlturaRetangulo;
         int posicaoY42 = fracaoAlturaRetangulo + fracaoAltura;
         int posicaoY43 = (fracaoAlturaRetangulo + (fracaoAltura * 2));
@@ -233,7 +233,7 @@ public class Jogo14 extends Panel {
         int posicaoY45 = (fracaoAlturaRetangulo + (fracaoAltura * 4));
         int posicaoY46 = (fracaoAlturaRetangulo + (fracaoAltura * 5));
         
-        int posicaoXColuna5 = fracaoLarguraRetangulo + (fracaoLargura * 2);
+        int posicaoXColuna5 = fracaoLarguraRetangulo + (fracaoLargura * 2) + (fracaoLargura * 2);
         int posicaoY51 = fracaoAlturaRetangulo;
         int posicaoY52 = fracaoAlturaRetangulo + fracaoAltura;
         int posicaoY53 = (fracaoAlturaRetangulo + (fracaoAltura * 2));
@@ -241,7 +241,7 @@ public class Jogo14 extends Panel {
         int posicaoY55 = (fracaoAlturaRetangulo + (fracaoAltura * 4));
         int posicaoY56 = (fracaoAlturaRetangulo + (fracaoAltura * 5));
         
-        int posicaoXColuna6 = fracaoLarguraRetangulo + (fracaoLargura * 2);
+        int posicaoXColuna6 = fracaoLarguraRetangulo +fracaoLargura+ (fracaoLargura * 2)+(fracaoLargura * 2);
         int posicaoY61 = fracaoAlturaRetangulo;
         int posicaoY62 = fracaoAlturaRetangulo + fracaoAltura;
         int posicaoY63 = (fracaoAlturaRetangulo + (fracaoAltura * 2));
@@ -249,7 +249,7 @@ public class Jogo14 extends Panel {
         int posicaoY65 = (fracaoAlturaRetangulo + (fracaoAltura * 4));
         int posicaoY66 = (fracaoAlturaRetangulo + (fracaoAltura * 5));
         
-        int posicaoXColuna7 = fracaoLarguraRetangulo + (fracaoLargura * 2);
+        int posicaoXColuna7 = fracaoLarguraRetangulo + (fracaoLargura * 2)+ (fracaoLargura * 2)+ (fracaoLargura * 2);
         int posicaoY71 = fracaoAlturaRetangulo;
         int posicaoY72 = fracaoAlturaRetangulo + fracaoAltura;
         int posicaoY73 = (fracaoAlturaRetangulo + (fracaoAltura * 2));

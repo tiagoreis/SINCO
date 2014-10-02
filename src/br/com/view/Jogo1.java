@@ -40,6 +40,12 @@ public class Jogo1 extends Panel {
     int meiaTelaLargura;
     int fracaoLargura;
 
+     
+   
+    int fracaoLarguraRetangulo ;
+    int fracaoAltura;
+    int fracaoAlturaRetangulo;
+    
     Map<String, String> valores = new HashMap<String, String>();
 
     Rectangle retangulo11;
@@ -91,22 +97,52 @@ public class Jogo1 extends Panel {
 
     public void MontarRetangulo() {
 
-        retangulo11 = new Rectangle(250, 125, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        ajustarTamanhoRetangulo();
+        
+        
+        int posicaoXColuna1 = (fracaoLarguraRetangulo+ fracaoLargura)/2;
+        int posicaoY11 = fracaoAlturaRetangulo;
+        int posicaoY12 = fracaoAlturaRetangulo + fracaoAltura;
+
+        int posicaoXColuna2 = (fracaoLarguraRetangulo + (fracaoLargura *2))/2;
+        int posicaoY21 = fracaoAlturaRetangulo;
+        int posicaoY22 = fracaoAlturaRetangulo + fracaoAltura;
+        
+        retangulo11 = new Rectangle(posicaoXColuna1, posicaoY11, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo11 = Color.black;
 
-        retangulo12 = new Rectangle(250, 350, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        retangulo12 = new Rectangle(posicaoXColuna1, posicaoY12, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo12 = Color.black;
 
 
-        retangulo21 = new Rectangle(600, 125, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        retangulo21 = new Rectangle(posicaoXColuna2, posicaoY21, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo21 = Color.black;
-        retangulo22 = new Rectangle(600, 350, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        retangulo22 = new Rectangle(posicaoXColuna2, posicaoY22, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo22 = Color.black;
 
         addMouseMotionListener(new RectangleHandler());
 
     }
 
+        private void ajustarTamanhoRetangulo() {
+
+        this.alturaRetanguloPadrao = util.getAlturaTela() / 5;
+        this.larguraRetanguloPadrao = util.getAlturaTela() / 5;
+
+        fracaoLargura = util.getLarguraTela() / 3;
+        fracaoLarguraRetangulo = fracaoLargura / 3;
+
+        fracaoAltura = util.getAlturaTela() / 3;
+        fracaoAlturaRetangulo = fracaoAltura / 3;
+
+        System.out.println("alturaRetanguloPadrao= " + this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= " + this.larguraRetanguloPadrao);
+        System.out.println("fracaoLargura= " + fracaoLargura + "  fracaoLarguraRetangulo= " + fracaoLarguraRetangulo);
+        System.out.println("fracaoAltura= " + fracaoAltura + "  fracaoAlturaRetangulo= " + fracaoAlturaRetangulo);
+        System.out.println("(fracaoAltura * 2) = " + (fracaoAltura * 2));
+
+    }
+
+        
     public void paint(Graphics grafico) {
 
 

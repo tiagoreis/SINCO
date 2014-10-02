@@ -45,7 +45,7 @@ public class Util {
 //        btnVoltar.setBounds((this.getLarguraTela() - 170), 10, 150, 100);
 
         frame.add(btnVoltar, BorderLayout.CENTER);
-        frame.add(btnZerar, BorderLayout.CENTER);
+        //frame.add(btnZerar, BorderLayout.CENTER);
         frame.add(new Jogo1());
         frame.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
