@@ -247,7 +247,9 @@ public class EscolheJogo extends javax.swing.JFrame {
     }//GEN-LAST:event_btnFase3ActionPerformed
 
     private void btnFase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFase4ActionPerformed
-        // TODO add your handling code here:
+        Jogo4 jogo = new Jogo4();
+        jogo.montarFrame();
+        dispose();
     }//GEN-LAST:event_btnFase4ActionPerformed
 
     private void btnFase5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFase5ActionPerformed

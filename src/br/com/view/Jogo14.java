@@ -193,7 +193,7 @@ public class Jogo14 extends Panel {
     }
 
     public void montarFrame() {
-        frame = this.util.montarFrameGenericoJogo14();
+        frame = this.util.montarFrameGenerico(14);
         frame.setTitle("Jogo 14");
     }
 

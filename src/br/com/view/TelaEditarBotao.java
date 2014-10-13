@@ -51,6 +51,7 @@ public class TelaEditarBotao extends javax.swing.JFrame {
         rdBtn10 = new javax.swing.JRadioButton();
         rdBtn11 = new javax.swing.JRadioButton();
         rdBtn12 = new javax.swing.JRadioButton();
+        btnFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -99,6 +100,13 @@ public class TelaEditarBotao extends javax.swing.JFrame {
 
         groupRadioBtn.add(rdBtn12);
 
+        btnFechar.setText("Fechar");
+        btnFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFecharActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -106,10 +114,13 @@ public class TelaEditarBotao extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnEnviar)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnEnviar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnFechar))
                     .addComponent(rdBtn2)
                     .addComponent(rdBtn1))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 319, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rdBtn3)
@@ -129,10 +140,12 @@ public class TelaEditarBotao extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnEnviar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEnviar)
+                    .addComponent(btnFechar))
+                .addGap(10, 10, 10)
                 .addComponent(rdBtn1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rdBtn2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(rdBtn3)
@@ -193,6 +206,11 @@ public class TelaEditarBotao extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rdBtn1ActionPerformed
 
+    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
+        
+        dispose();
+    }//GEN-LAST:event_btnFecharActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -230,6 +248,7 @@ public class TelaEditarBotao extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEnviar;
+    private javax.swing.JButton btnFechar;
     private javax.swing.ButtonGroup groupRadioBtn;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JRadioButton rdBtn1;

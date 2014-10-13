@@ -2,6 +2,7 @@ package br.com.view;
 
 import br.com.util.Util;
 import java.awt.AWTException;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -50,12 +51,8 @@ public class Jogo1 extends Panel {
 
     Rectangle retangulo11;
     Rectangle retangulo12;
-    Rectangle retangulo13;
-    Rectangle retangulo14;
     Color corRetangulo11;
     Color corRetangulo12;
-    Color corRetangulo13;
-    Color corRetangulo14;
 
     boolean retangulo11Marcado = false;
     boolean retangulo12Marcado = false;
@@ -67,31 +64,42 @@ public class Jogo1 extends Panel {
 
     Rectangle retangulo21;
     Rectangle retangulo22;
-    Rectangle retangulo23;
-    Rectangle retangulo24;
     Color corRetangulo21;
     Color corRetangulo22;
-    Color corRetangulo23;
-    Color corRetangulo24;
 
-    JButton btnVoltar = new JButton("Voltar");
+    Color corPadrao = Color.BLACK;
+//    JButton btnVoltar = new JButton("Voltar");
     JButton btnZerar = new JButton("Zerar Jogo");
     
     Util util = new Util();
     private static final long serialVersionUID = 8067455339781596616L;
 
-    private boolean zerarJogo = false;
-    
+
     
     public Jogo1() {
-        AjustarCursosMouse();
+        util.AjustarCursosMouse();
         AjustarTamanhoTela();
         MontarRetangulo();
 
     }
 
     public void montarFrame() {
-        frame = this.util.montarFrameGenericoJogo1();
+//        frame = this.util.montarFrameGenericoJogo1();
+        frame.add(btnZerar, BorderLayout.CENTER);
+        btnZerar.setBounds(0, (alturaTela - 150), 150, 100);
+        frame = this.util.montarFrameGenerico(1, frame);
+
+        btnZerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+                try {
+                    reiniciarQuadadros();
+                } catch (Exception ex) {
+                    //Logger.getLogger(Jogo1.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+
+        });
         frame.setTitle("Jogo 1");
     }
 
@@ -99,21 +107,19 @@ public class Jogo1 extends Panel {
 
         ajustarTamanhoRetangulo();
         
-        
-        int posicaoXColuna1 = (fracaoLarguraRetangulo+ fracaoLargura)/2;
-        int posicaoY11 = fracaoAlturaRetangulo;
-        int posicaoY12 = fracaoAlturaRetangulo + fracaoAltura;
+        int posicaoXColuna1 = fracaoLargura;
+        int posicaoY11 = fracaoAltura;
+        int posicaoY12 =  fracaoAltura *2 + fracaoAlturaRetangulo;
 
-        int posicaoXColuna2 = (fracaoLarguraRetangulo + (fracaoLargura *2))/2;
-        int posicaoY21 = fracaoAlturaRetangulo;
-        int posicaoY22 = fracaoAlturaRetangulo + fracaoAltura;
-        
+        int posicaoXColuna2 = fracaoLargura *2;
+        int posicaoY21 = fracaoAltura;
+        int posicaoY22 = fracaoAltura *2 + fracaoAlturaRetangulo;
+   
         retangulo11 = new Rectangle(posicaoXColuna1, posicaoY11, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo11 = Color.black;
 
         retangulo12 = new Rectangle(posicaoXColuna1, posicaoY12, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo12 = Color.black;
-
 
         retangulo21 = new Rectangle(posicaoXColuna2, posicaoY21, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo21 = Color.black;
@@ -129,47 +135,35 @@ public class Jogo1 extends Panel {
         this.alturaRetanguloPadrao = util.getAlturaTela() / 5;
         this.larguraRetanguloPadrao = util.getAlturaTela() / 5;
 
-        fracaoLargura = util.getLarguraTela() / 3;
-        fracaoLarguraRetangulo = fracaoLargura / 3;
+        fracaoLargura = util.getLarguraTela() / 4;
+        fracaoLarguraRetangulo = fracaoLargura / 4;
 
-        fracaoAltura = util.getAlturaTela() / 3;
+        fracaoAltura = util.getAlturaTela() / 5;
         fracaoAlturaRetangulo = fracaoAltura / 3;
 
-        System.out.println("alturaRetanguloPadrao= " + this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= " + this.larguraRetanguloPadrao);
-        System.out.println("fracaoLargura= " + fracaoLargura + "  fracaoLarguraRetangulo= " + fracaoLarguraRetangulo);
-        System.out.println("fracaoAltura= " + fracaoAltura + "  fracaoAlturaRetangulo= " + fracaoAlturaRetangulo);
-        System.out.println("(fracaoAltura * 2) = " + (fracaoAltura * 2));
+//        System.out.println("alturaRetanguloPadrao= " + this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= " + this.larguraRetanguloPadrao);
+//        System.out.println("fracaoLargura= " + fracaoLargura + "  fracaoLarguraRetangulo= " + fracaoLarguraRetangulo);
+//        System.out.println("fracaoAltura= " + fracaoAltura + "  fracaoAlturaRetangulo= " + fracaoAlturaRetangulo);
+//        System.out.println("(fracaoAltura * 2) = " + (fracaoAltura * 2));
 
     }
 
         
+    @Override
     public void paint(Graphics grafico) {
-
 
         grafico.setColor(corRetangulo11);
         grafico.fillRect(retangulo11.x, retangulo11.y, retangulo11.width, retangulo11.height);
-        
         grafico.setColor(corRetangulo12);
-        grafico.fillRect(retangulo12.x, retangulo12.y, retangulo12.width,
-                retangulo12.height);
+        grafico.fillRect(retangulo12.x, retangulo12.y, retangulo12.width, retangulo12.height);
 
         grafico.setColor(corRetangulo21);
-        grafico.fillRect(retangulo21.x, retangulo21.y, retangulo21.width,
-                retangulo21.height);
+        grafico.fillRect(retangulo21.x, retangulo21.y, retangulo21.width, retangulo21.height);
         grafico.setColor(corRetangulo22);
-        grafico.fillRect(retangulo22.x, retangulo22.y, retangulo22.width,
-                retangulo22.height);
+        grafico.fillRect(retangulo22.x, retangulo22.y, retangulo22.width, retangulo22.height);
     }
 
-    private void AjustarCursosMouse() {
 
-        try {
-            Robot robot = new Robot();
-            robot.mouseMove(0, 0);
-        } catch (AWTException e) {
-        }
-
-    }
 
     private void AjustarTamanhoTela() {
         this.alturaTela = ((Toolkit.getDefaultToolkit().getScreenSize()).height);
@@ -181,11 +175,6 @@ public class Jogo1 extends Panel {
         this.meiaTelaLargura = this.larguraTela / 2;
         this.fracaoLargura = (this.larguraTela / 2) / 3;
 
-        // debug
-//		System.out.println("width= " + this.larguraTela + "  height= "	+ this.alturaTela);
-//		System.out.println("alturaRetanguloPadrao= "+ this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= "	+ this.larguraRetanguloPadrao);
-//		System.out.println("largura 1= " + fracaoLargura);
-//		System.out.println("largura 2= " + (meiaTelaLargura + fracaoLargura));
     }
 
     public void iniciaCronometro() {
@@ -247,17 +236,20 @@ public class Jogo1 extends Panel {
         timer.schedule(tarefa, 1000, 1000);
     }
 
-    private void reiniciarQuadadros() {
-        
-//        System.out.println("zerar");
-        
-    }
+            public void reiniciarQuadadros() {
+        corRetangulo11 = corPadrao;
+        corRetangulo12 = corPadrao;
+        corRetangulo21 = corPadrao;
+        corRetangulo22 = corPadrao;
 
-    /**
-     * @param zerarJogo the zerarJogo to set
-     */
-    public void setZerarJogo(boolean zerarJogo) {
-        this.zerarJogo = zerarJogo;
+        retangulo11Marcado = false;
+        retangulo12Marcado = false;
+        retangulo21Marcado = false;
+        retangulo22Marcado = false;
+
+//        paint(null);
+        frame.repaint();
+        
     }
 
     private class RectangleHandler extends MouseMotionAdapter {
@@ -275,6 +267,8 @@ public class Jogo1 extends Panel {
             verificarTodosRetangulos();
 
         }
+        
+
 
         private void verificarTodosRetangulos() {
 

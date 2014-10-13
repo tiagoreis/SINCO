@@ -18,16 +18,13 @@ import java.util.Map;
 
 import javax.swing.JLabel;
 
-public class Jogo3 extends Panel {
+public class Jogo4 extends Panel {
 
-    // http://www.professorvida.com.br/el53d/2_ig1.pdf
-    // http://www.eclipse.org/efxclipse/install.html
-    // http://efxclipse.bestsolution.at/install.html
     int alturaTela;
     int larguraTela;
 
-    int alturaRetanguloPadrao = 100;
-    int larguraRetanguloPadrao = 100;
+    int alturaRetanguloPadrao = 80;
+    int larguraRetanguloPadrao = 80;
 
     int fatorEspacoY = 110;
     int fatorEspacoX = 110;
@@ -42,48 +39,64 @@ public class Jogo3 extends Panel {
 
     Rectangle retangulo11;
     Rectangle retangulo12;
+    Rectangle retangulo13;
+
     Color corRetangulo11;
     Color corRetangulo12;
+    Color corRetangulo13;
 
     Rectangle retangulo21;
     Rectangle retangulo22;
+    Rectangle retangulo23;
+
     Color corRetangulo21;
     Color corRetangulo22;
+    Color corRetangulo23;
 
     Rectangle retangulo31;
     Rectangle retangulo32;
+    Rectangle retangulo33;
+    
     Color corRetangulo31;
     Color corRetangulo32;
+    Color corRetangulo33;
 
     Rectangle retangulo41;
     Rectangle retangulo42;
+    Rectangle retangulo43;
+
     Color corRetangulo41;
     Color corRetangulo42;
+    Color corRetangulo43;
 
     boolean retangulo11Marcado = false;
     boolean retangulo12Marcado = false;
+    boolean retangulo13Marcado = false;
     boolean retangulo21Marcado = false;
     boolean retangulo22Marcado = false;
+    boolean retangulo23Marcado = false;
     boolean retangulo31Marcado = false;
     boolean retangulo32Marcado = false;
+    boolean retangulo33Marcado = false;
     boolean retangulo41Marcado = false;
     boolean retangulo42Marcado = false;
+    boolean retangulo43Marcado = false;
 
     static JLabel lblCronometro = new JLabel();
-    static Frame frame = new Frame("Fase 3");
+    static Frame frame = new Frame("Fase 4");
 
     private static final long serialVersionUID = 8067455339781596616L;
     Util util = new Util();
 
-    public Jogo3() {
+    public Jogo4() {
         AjustarCursosMouse();
         util.AjustarTamanhoTela();
         montarRetangulo();
     }
 
     public void montarFrame() {
-        frame = this.util.montarFrameGenerico(3);
-        frame.setTitle("Jogo 3");
+        frame = this.util.montarFrameGenerico(4);
+        frame.setTitle("Jogo 4");
     }
 
     public void montarRetangulo() {
@@ -92,33 +105,62 @@ public class Jogo3 extends Panel {
         //x = largura na tela
         //y = altura na tela
         // x ,  y , width, height
+        int posicaoXColuna1 = fracaoLarguraRetangulo;
+        int posicaoY11 = fracaoAlturaRetangulo;
+        int posicaoY12 = fracaoAlturaRetangulo + fracaoAltura;
+        int posicaoY13 = (fracaoAlturaRetangulo + (fracaoAltura * 2));
+        
+        int posicaoXColuna2 = (fracaoLarguraRetangulo + fracaoLargura);
+        int posicaoY21 = fracaoAlturaRetangulo;
+        int posicaoY22 = fracaoAlturaRetangulo + fracaoAltura;
+        int posicaoY23 = (fracaoAlturaRetangulo + (fracaoAltura * 2));
+        
+        int posicaoXColuna3 = fracaoLarguraRetangulo + (fracaoLargura * 2);
+        int posicaoY31 = fracaoAlturaRetangulo;
+        int posicaoY32 = fracaoAlturaRetangulo + fracaoAltura;
+        int posicaoY33 = (fracaoAlturaRetangulo + (fracaoAltura * 2));
+        
+        int posicaoXColuna4 = fracaoLarguraRetangulo + fracaoLargura + (fracaoLargura* 2);
+        int posicaoY41 = fracaoAlturaRetangulo;
+        int posicaoY42 = fracaoAlturaRetangulo + fracaoAltura;
+        int posicaoY43 = (fracaoAlturaRetangulo + (fracaoAltura * 2));
 
-        retangulo11 = new Rectangle(fracaoLarguraRetangulo, fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
+
+        retangulo11 = new Rectangle(posicaoXColuna1, posicaoY11, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo11 = Color.black;
-        retangulo12 = new Rectangle(fracaoLarguraRetangulo, (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
+        retangulo12 = new Rectangle(posicaoXColuna1, posicaoY12, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo12 = Color.black;
+        retangulo13 = new Rectangle(posicaoXColuna1, posicaoY13, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo13 = Color.black;
 
-        retangulo21 = new Rectangle((fracaoLarguraRetangulo + fracaoLargura), fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        retangulo21 = new Rectangle(posicaoXColuna2, posicaoY21, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo21 = Color.black;
-        retangulo22 = new Rectangle((fracaoLarguraRetangulo + fracaoLargura), (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
+        retangulo22 = new Rectangle(posicaoXColuna2, posicaoY22, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo22 = Color.black;
+        retangulo23 = new Rectangle(posicaoXColuna2, posicaoY23, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo23 = Color.black;
 
-        retangulo31 = new Rectangle((fracaoLarguraRetangulo + (fracaoLargura * 2)), fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        retangulo31 = new Rectangle(posicaoXColuna3, posicaoY31, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo31 = Color.black;
-        retangulo32 = new Rectangle((fracaoLarguraRetangulo + (fracaoLargura * 2)), (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
+        retangulo32 = new Rectangle(posicaoXColuna3, posicaoY32, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo32 = Color.black;
+        retangulo33 = new Rectangle(posicaoXColuna3, posicaoY33, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo33 = Color.black;
 
-        retangulo41 = new Rectangle((fracaoLarguraRetangulo + (fracaoLargura * 3)), fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        retangulo41 = new Rectangle(posicaoXColuna4, posicaoY41, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo41 = Color.black;
-        retangulo42 = new Rectangle((fracaoLarguraRetangulo + (fracaoLargura * 3)), (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
+        retangulo42 = new Rectangle(posicaoXColuna4, posicaoY42, larguraRetanguloPadrao, alturaRetanguloPadrao);
         corRetangulo42 = Color.black;
+        retangulo43 = new Rectangle(posicaoXColuna4, posicaoY43, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo43 = Color.black;
 
         addMouseMotionListener(new RectangleHandler());
 
 
     }
 
-        private void ajustarTamanhoRetangulo() {
+        
+    private void ajustarTamanhoRetangulo() {
         
         this.alturaRetanguloPadrao = util.getAlturaTela() / 5;
         this.larguraRetanguloPadrao = util.getAlturaTela() / 5;
@@ -126,13 +168,13 @@ public class Jogo3 extends Panel {
         fracaoLargura = util.getLarguraTela() / 4;
         fracaoLarguraRetangulo = fracaoLargura / 4;
         
-        fracaoAltura = util.getAlturaTela() / 3;
-        fracaoAlturaRetangulo = fracaoAltura / 3;
-        
+        fracaoAltura = util.getAlturaTela() / 4;
+        fracaoAlturaRetangulo = fracaoAltura / 4;
         
 //        System.out.println("alturaRetanguloPadrao= " + this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= " + this.larguraRetanguloPadrao);
-//        System.out.println("fracaoLargura= " + fracaoLargura + "  fracaoLarguraP= " + fracaoLarguraRetangulo);
-//        System.out.println("fracaoAltura= " + fracaoAltura + "  fracaoAlturaP= " + fracaoAlturaRetangulo);
+//        System.out.println("fracaoLargura= " + fracaoLargura + "  fracaoLarguraRetangulo= " + fracaoLarguraRetangulo);
+//        System.out.println("fracaoAltura= " + fracaoAltura + "  fracaoAlturaRetangulo= " + fracaoAlturaRetangulo);
+//        System.out.println("(fracaoAltura * 2) = " + (fracaoAltura * 2));
 
     }
 
@@ -140,26 +182,32 @@ public class Jogo3 extends Panel {
     public void paint(Graphics grafico) {
 
         grafico.setColor(corRetangulo11);
-        grafico.fillRect(retangulo11.x, retangulo11.y, retangulo11.width,
-                retangulo11.height);
+        grafico.fillRect(retangulo11.x, retangulo11.y, retangulo11.width, retangulo11.height);
         grafico.setColor(corRetangulo12);
-        grafico.fillRect(retangulo12.x, retangulo12.y, retangulo12.width,
-                retangulo12.height);
+        grafico.fillRect(retangulo12.x, retangulo12.y, retangulo12.width, retangulo12.height);
+        grafico.setColor(corRetangulo13);
+        grafico.fillRect(retangulo13.x, retangulo13.y, retangulo13.width, retangulo13.height);
 
         grafico.setColor(corRetangulo21);
-        grafico.fillRect(retangulo21.x, retangulo21.y, retangulo21.width,retangulo21.height);
+        grafico.fillRect(retangulo21.x, retangulo21.y, retangulo21.width, retangulo21.height);
         grafico.setColor(corRetangulo22);
-        grafico.fillRect(retangulo22.x, retangulo22.y, retangulo22.width,retangulo22.height);
+        grafico.fillRect(retangulo22.x, retangulo22.y, retangulo22.width, retangulo22.height);
+        grafico.setColor(corRetangulo23);
+        grafico.fillRect(retangulo23.x, retangulo23.y, retangulo23.width,retangulo23.height);
 
         grafico.setColor(corRetangulo31);
-        grafico.fillRect(retangulo31.x, retangulo31.y, retangulo31.width,retangulo31.height);
+        grafico.fillRect(retangulo31.x, retangulo31.y, retangulo31.width, retangulo31.height);
         grafico.setColor(corRetangulo32);
-        grafico.fillRect(retangulo32.x, retangulo32.y, retangulo32.width,retangulo32.height);
+        grafico.fillRect(retangulo32.x, retangulo32.y, retangulo32.width, retangulo32.height);
+        grafico.setColor(corRetangulo33);
+        grafico.fillRect(retangulo33.x, retangulo33.y, retangulo33.width,retangulo33.height);
 
         grafico.setColor(corRetangulo41);
         grafico.fillRect(retangulo41.x, retangulo41.y, retangulo41.width,retangulo41.height);
         grafico.setColor(corRetangulo42);
         grafico.fillRect(retangulo42.x, retangulo42.y, retangulo42.width,retangulo42.height);
+        grafico.setColor(corRetangulo43);
+        grafico.fillRect(retangulo43.x, retangulo43.y, retangulo43.width,retangulo43.height);
 
     }
 
@@ -174,23 +222,6 @@ public class Jogo3 extends Panel {
 
     }
 
-    private void AjustarTamanhoTela() {
-        this.alturaTela = ((Toolkit.getDefaultToolkit().getScreenSize()).height);
-        this.larguraTela = ((Toolkit.getDefaultToolkit().getScreenSize()).width);
-
-        this.alturaRetanguloPadrao = alturaTela / 5;
-        this.larguraRetanguloPadrao = alturaTela / 5;
-
-        this.meiaTelaLargura = this.larguraTela / 2;
-        this.fracaoLargura = (this.larguraTela / 2) / 3;
-
-        // debug
-//        System.out.println("width= " + this.larguraTela + "  height= " + this.alturaTela);
-//        System.out.println("alturaRetanguloPadrao= " + this.alturaRetanguloPadrao + "  larguraRetanguloPadrao= " + this.larguraRetanguloPadrao);
-//		System.out.println("largura 1= " + fracaoLargura);
-//		System.out.println("largura 2= " + (meiaTelaLargura + fracaoLargura));
-    }
-
     private class RectangleHandler extends MouseMotionAdapter {
 
         public void mouseMoved(MouseEvent event) {
@@ -199,15 +230,19 @@ public class Jogo3 extends Panel {
 
             pintarRetangulo11(posicaoX, posicaoY);
             pintarRetangulo12(posicaoX, posicaoY);
+            pintarRetangulo13(posicaoX, posicaoY);
 
             pintarRetangulo21(posicaoX, posicaoY);
             pintarRetangulo22(posicaoX, posicaoY);
+            pintarRetangulo23(posicaoX, posicaoY);
 
             pintarRetangulo31(posicaoX, posicaoY);
             pintarRetangulo32(posicaoX, posicaoY);
+            pintarRetangulo33(posicaoX, posicaoY);
 
             pintarRetangulo41(posicaoX, posicaoY);
             pintarRetangulo42(posicaoX, posicaoY);
+            pintarRetangulo43(posicaoX, posicaoY);
 
             verificarTodosRetangulos();
 
@@ -222,7 +257,6 @@ public class Jogo3 extends Panel {
 
         }
 
-        //11
         private void pintarRetangulo11(int posicaoX, int posicaoY) {
 
             int retanguloX1 = retangulo11.x;
@@ -240,8 +274,6 @@ public class Jogo3 extends Panel {
             }
 
         }
-
-        //12
         private void pintarRetangulo12(int posicaoX, int posicaoY) {
 
             int retanguloX1 = retangulo12.x;
@@ -259,8 +291,23 @@ public class Jogo3 extends Panel {
             }
 
         }
+        private void pintarRetangulo13(int posicaoX, int posicaoY) {
 
-        // 21
+            int retanguloX1 = retangulo13.x;
+            int retanguloX2 = retangulo13.x + retangulo13.width;
+            int retanguloY1 = retangulo13.y;
+            int retanguloY2 = retangulo13.y + retangulo13.height;
+            Color cor = null;
+
+            if (posicaoX > retanguloX1 && posicaoX < retanguloX2
+                    && posicaoY > retanguloY1 && posicaoY < retanguloY2) {
+                cor = Color.blue;
+                corRetangulo13 = cor;
+                retangulo13Marcado = true;
+                repaint();
+            }
+
+        }
         private void pintarRetangulo21(int posicaoX, int posicaoY) {
 
             int retanguloX1 = retangulo21.x;
@@ -278,8 +325,6 @@ public class Jogo3 extends Panel {
             }
 
         }
-
-        //22
         private void pintarRetangulo22(int posicaoX, int posicaoY) {
 
             int retanguloX1 = retangulo22.x;
@@ -297,8 +342,23 @@ public class Jogo3 extends Panel {
             }
 
         }
+        private void pintarRetangulo23(int posicaoX, int posicaoY) {
 
-        // 31
+            int retanguloX1 = retangulo23.x;
+            int retanguloX2 = retangulo23.x + retangulo23.width;
+            int retanguloY1 = retangulo23.y;
+            int retanguloY2 = retangulo23.y + retangulo23.height;
+            Color cor = null;
+
+            if (posicaoX > retanguloX1 && posicaoX < retanguloX2
+                    && posicaoY > retanguloY1 && posicaoY < retanguloY2) {
+                cor = Color.blue;
+                corRetangulo23 = cor;
+                retangulo23Marcado = true;
+                repaint();
+            }
+
+        }
         private void pintarRetangulo31(int posicaoX, int posicaoY) {
 
             int retanguloX1 = retangulo31.x;
@@ -316,8 +376,6 @@ public class Jogo3 extends Panel {
             }
 
         }
-
-        //32
         private void pintarRetangulo32(int posicaoX, int posicaoY) {
 
             int retanguloX1 = retangulo32.x;
@@ -335,8 +393,23 @@ public class Jogo3 extends Panel {
             }
 
         }
+        private void pintarRetangulo33(int posicaoX, int posicaoY) {
 
-                // 41
+            int retanguloX1 = retangulo33.x;
+            int retanguloX2 = retangulo33.x + retangulo33.width;
+            int retanguloY1 = retangulo33.y;
+            int retanguloY2 = retangulo33.y + retangulo33.height;
+            Color cor = null;
+
+            if (posicaoX > retanguloX1 && posicaoX < retanguloX2
+                    && posicaoY > retanguloY1 && posicaoY < retanguloY2) {
+                cor = Color.blue;
+                corRetangulo33 = cor;
+                retangulo33Marcado = true;
+                repaint();
+            }
+
+        }
         private void pintarRetangulo41(int posicaoX, int posicaoY) {
 
             int retanguloX1 = retangulo41.x;
@@ -354,8 +427,6 @@ public class Jogo3 extends Panel {
             }
 
         }
-
-        //42
         private void pintarRetangulo42(int posicaoX, int posicaoY) {
 
             int retanguloX1 = retangulo42.x;
@@ -369,6 +440,23 @@ public class Jogo3 extends Panel {
                 cor = Color.blue;
                 corRetangulo42 = cor;
                 retangulo42Marcado = true;
+                repaint();
+            }
+
+        }
+        private void pintarRetangulo43(int posicaoX, int posicaoY) {
+
+            int retanguloX1 = retangulo43.x;
+            int retanguloX2 = retangulo43.x + retangulo43.width;
+            int retanguloY1 = retangulo43.y;
+            int retanguloY2 = retangulo43.y + retangulo43.height;
+            Color cor = null;
+
+            if (posicaoX > retanguloX1 && posicaoX < retanguloX2
+                    && posicaoY > retanguloY1 && posicaoY < retanguloY2) {
+                cor = Color.blue;
+                corRetangulo43 = cor;
+                retangulo43Marcado = true;
                 repaint();
             }
 

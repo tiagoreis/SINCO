@@ -80,48 +80,35 @@ public class Jogo2 extends Panel {
     }
 
     public void montarFrame() {
-        
-//        btnVoltar = util.localizacaoBotaoVoltar(btnVoltar);
-//        frame.add(btnVoltar, BorderLayout.CENTER);
-        frame = this.util.montarFrameGenericoJogo2();
+        frame = this.util.montarFrameGenerico(2);
         frame.setTitle("Jogo 2");
-
     }
 
 
     public void montarRetangulo() {
 
         ajustarTamanhoRetangulo();
-        int nivel = 1;
 
-        switch (nivel) {
-            case 1:
-                //x = largura na tela
-                //y = altura na tela
-                // x ,  y , width, height
+        retangulo11 = new Rectangle(fracaoLarguraRetangulo,
+                fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo11 = Color.black;
+        retangulo12 = new Rectangle(fracaoLarguraRetangulo, (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo12 = Color.black;
 
-                retangulo11 = new Rectangle(fracaoLarguraRetangulo, 
-                        fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
-                corRetangulo11 = Color.black;
-                retangulo12 = new Rectangle(fracaoLarguraRetangulo, (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
-                corRetangulo12 = Color.black;
+        retangulo21 = new Rectangle((fracaoLarguraRetangulo + fracaoLargura),
+                fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo21 = Color.black;
+        retangulo22 = new Rectangle((fracaoLarguraRetangulo + fracaoLargura),
+                (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo22 = Color.black;
 
-                retangulo21 = new Rectangle((fracaoLarguraRetangulo + fracaoLargura), 
-                        fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
-                corRetangulo21 = Color.black;
-                retangulo22 = new Rectangle((fracaoLarguraRetangulo + fracaoLargura), 
-                        (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
-                corRetangulo22 = Color.black;
+        retangulo31 = new Rectangle((fracaoLarguraRetangulo + (fracaoLargura * 2)), fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo31 = Color.black;
+        retangulo32 = new Rectangle((fracaoLarguraRetangulo + (fracaoLargura * 2)), (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
+        corRetangulo32 = Color.black;
 
-                retangulo31 = new Rectangle((fracaoLarguraRetangulo + (fracaoLargura * 2)), fracaoAlturaRetangulo, larguraRetanguloPadrao, alturaRetanguloPadrao);
-                corRetangulo31 = Color.black;
-                retangulo32 = new Rectangle((fracaoLarguraRetangulo + (fracaoLargura * 2)), (fracaoAlturaRetangulo + fracaoAltura), larguraRetanguloPadrao, alturaRetanguloPadrao);
-                corRetangulo32 = Color.black;
+        addMouseMotionListener(new RectangleHandler());
 
-                addMouseMotionListener(new RectangleHandler());
-
-                break;
-        }
     }
 
     public void paint(Graphics grafico) {
