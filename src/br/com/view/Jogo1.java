@@ -19,10 +19,11 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.text.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javafx.scene.text.*;
+import javax.swing.SwingUtilities;
 
 public class Jogo1 extends Panel {
 
@@ -70,6 +71,7 @@ public class Jogo1 extends Panel {
     Color corPadrao = Color.BLACK;
 //    JButton btnVoltar = new JButton("Voltar");
     JButton btnZerar = new JButton("Zerar Jogo");
+    boolean zerarJogo = false;
     
     Util util = new Util();
     private static final long serialVersionUID = 8067455339781596616L;
@@ -236,7 +238,8 @@ public class Jogo1 extends Panel {
         timer.schedule(tarefa, 1000, 1000);
     }
 
-            public void reiniciarQuadadros() {
+            
+    public void reiniciarQuadadros() {
         corRetangulo11 = corPadrao;
         corRetangulo12 = corPadrao;
         corRetangulo21 = corPadrao;
@@ -247,8 +250,11 @@ public class Jogo1 extends Panel {
         retangulo21Marcado = false;
         retangulo22Marcado = false;
 
-//        paint(null);
-        frame.repaint();
+//        frame.invalidate();
+//        frame.validate();
+//        frame.repaint();
+//        
+        SwingUtilities.updateComponentTreeUI(frame);
         
     }
 
@@ -265,6 +271,11 @@ public class Jogo1 extends Panel {
             pintarRetangulo22(posicaoX, posicaoY);
 
             verificarTodosRetangulos();
+            
+            if(zerarJogo){
+                pintarTodos();
+                zerarJogo = false;
+            }
 
         }
         
@@ -279,6 +290,25 @@ public class Jogo1 extends Panel {
 
         }
 
+                
+        private void pintarTodos() {
+
+            corRetangulo11 = corPadrao;
+            corRetangulo12 = corPadrao;
+            corRetangulo21 = corPadrao;
+            corRetangulo22 = corPadrao;
+
+            retangulo11Marcado = false;
+            retangulo12Marcado = false;
+            retangulo21Marcado = false;
+            retangulo22Marcado = false;
+
+            repaint();
+            validate();
+
+        }
+
+                
         private void pintarRetangulo11(int posicaoX, int posicaoY) {
 
             int retanguloX1 = retangulo11.x;
