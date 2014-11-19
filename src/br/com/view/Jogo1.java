@@ -87,9 +87,9 @@ public class Jogo1 extends Panel {
 
     public void montarFrame() {
 //        frame = this.util.montarFrameGenericoJogo1();
-        frame.add(btnZerar, BorderLayout.CENTER);
-        btnZerar.setBounds(0, (alturaTela - 150), 150, 100);
-        frame = this.util.montarFrameGenerico(1, frame);
+        //frame.add(btnZerar, BorderLayout.CENTER);
+        //btnZerar.setBounds(0, (alturaTela - 150), 150, 100);
+        frame = this.util.montarFrameGenerico(1);
 
         btnZerar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,8 +137,8 @@ public class Jogo1 extends Panel {
         this.alturaRetanguloPadrao = util.getAlturaTela() / 5;
         this.larguraRetanguloPadrao = util.getAlturaTela() / 5;
 
-        fracaoLargura = util.getLarguraTela() / 4;
-        fracaoLarguraRetangulo = fracaoLargura / 4;
+        fracaoLargura = util.getLarguraTela() / 3;
+        fracaoLarguraRetangulo = fracaoLargura / 3;
 
         fracaoAltura = util.getAlturaTela() / 5;
         fracaoAlturaRetangulo = fracaoAltura / 3;

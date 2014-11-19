@@ -130,9 +130,9 @@ public class Util {
             case 5:
                 frame.add(new Jogo5());
                 break;
-//            case 6:
-//                frame.add(new Jogo6());
-//                break;
+            case 6:
+                frame.add(new Jogo6());
+                break;
 //            case 7:
 //                frame.add(new Jogo7());
 //                break;
